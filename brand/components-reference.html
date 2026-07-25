@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEMAE Design System · Components Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g1:#0F3A12;--g2:#22562A;--g3:#2A6B2E;--g4:#3D8C42;--g5:#E8F1E5;
+  --amarelo:#FCF016;--amarelo2:#FCE615;
+  --navy:#0A2540;--navy2:#0d2d4d;--navy3:#143861;
+  --bg:#F9FAFB;--bg2:#F4F7F1;--white:#FFFFFF;
+  --border:#E5E7EB;--border2:#D1D5DB;
+  --t1:#0B1220;--t2:#374151;--t3:#6B7280;--t4:#9CA3AF;
+  --radius:10px;--radius-sm:6px;--radius-lg:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t2);font-family:'DM Sans',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;color:var(--t1);letter-spacing:-0.025em;margin-bottom:.5rem}
+h1+p{color:var(--t3);font-size:1rem;margin-bottom:3rem}
+h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem;font-weight:700;color:var(--t1);margin:3rem 0 1rem;letter-spacing:-0.01em;padding-bottom:.5rem;border-bottom:2px solid var(--g2)}
+h2 span{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--t3);letter-spacing:.15em;text-transform:uppercase;font-weight:500;margin-left:.5rem}
+.note{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--t3);background:var(--bg2);padding:.6rem .9rem;border-left:3px solid var(--g2);border-radius:4px;margin-top:.8rem;line-height:1.5}
+
+/* === Bignum === */
+.bignum-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--t1);background:var(--white);margin-top:1rem}
+.bignum{padding:2.2rem 1.8rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.bignum:last-child{border-right:none}
+.bignum-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);margin-bottom:.8rem;font-weight:600}
+.bignum-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:3rem;font-weight:800;line-height:.95;letter-spacing:-0.03em;color:var(--t1)}
+.bignum-val small{font-size:.4em;color:var(--t3);font-weight:500;margin-left:.15em}
+.bignum-delta{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;margin-top:.8rem;color:var(--g2);font-weight:700}
+.bignum-src{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;color:var(--t3);text-transform:uppercase;margin-top:1.1rem;opacity:.75}
+
+/* === Tile Navy === */
+.tile-navy{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;border-radius:var(--radius);padding:1.6rem 1.4rem 1.3rem;position:relative;overflow:hidden;max-width:280px;margin-top:1rem}
+.tile-navy::before{content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(252,240,22,.1),transparent 65%);pointer-events:none}
+.tile-lab{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amarelo);margin-bottom:.6rem;font-weight:700;position:relative}
+.tile-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;position:relative}
+.tile-desc{font-size:.78rem;color:rgba(255,255,255,.75);margin-top:.6rem;line-height:1.45;position:relative}
+.tile-src{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.12em;color:rgba(252,240,22,.65);margin-top:.8rem;text-transform:uppercase;position:relative}
+
+/* === Stars Banner === */
+.stars-banner{background:linear-gradient(90deg,rgba(252,240,22,.18) 0%,rgba(34,86,42,.1) 100%);border:1px solid rgba(252,240,22,.35);border-left:4px solid var(--amarelo);border-radius:var(--radius);padding:1.3rem 1.6rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:1rem}
+.stars-eyebrow{font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.05em;color:var(--g1);white-space:nowrap}
+.stars-text{flex:1;font-size:.92rem;line-height:1.55;color:var(--t2);min-width:260px}
+.stars-text strong{color:var(--g1);font-weight:700}
+
+/* === Startup chip === */
+.chips{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-top:1rem;max-width:700px}
+.startup-chip{aspect-ratio:1.15;border:1px solid var(--border);background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.7rem .5rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.03em;color:var(--t3);transition:all .25s;position:relative;overflow:hidden;border-radius:8px}
+.startup-chip::before{content:attr(data-n);position:absolute;top:.35rem;left:.45rem;font-size:.52rem;color:var(--t4);font-weight:600}
+.startup-chip strong{font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:-0.01em;margin-bottom:.2rem;color:var(--t1)}
+.startup-chip span{font-size:.58rem;color:var(--t4)}
+.startup-chip.both{border:2px solid var(--amarelo);background:linear-gradient(135deg,rgba(252,240,22,.12) 0%,rgba(252,240,22,.04) 100%);box-shadow:0 0 0 1px rgba(252,240,22,.3)}
+.startup-chip.both::after{content:"★";position:absolute;top:.3rem;right:.4rem;font-size:.65rem;color:var(--g2);font-weight:700}
+.startup-chip.both strong{color:var(--g1)}
+
+/* === Obra row === */
+.obras{margin-top:1rem;border-top:2px solid var(--t1);background:var(--white)}
+.obra{display:grid;grid-template-columns:60px 1fr 160px 110px 110px;gap:1.5rem;padding:1.5rem 1rem;border-bottom:1px solid var(--border);align-items:center}
+.obra-num{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--t3);letter-spacing:.15em;font-weight:600}
+.obra-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--t1);letter-spacing:-0.015em;line-height:1.25}
+.obra-title small{display:block;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:400;color:var(--t3);margin-top:.3rem;line-height:1.5}
+.obra-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--g2);letter-spacing:-0.02em;line-height:1.05}
+.obra-val small{font-size:.55rem;font-family:'JetBrains Mono',monospace;color:var(--t3);letter-spacing:.12em;display:block;margin-top:.2rem;font-weight:600}
+.obra-src{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase}
+.obra-status{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;padding:.4rem .6rem;text-align:center;justify-self:start;border:1px solid currentColor;border-radius:3px;white-space:nowrap}
+.st-done{color:var(--g2);background:rgba(34,86,42,.06)}
+.st-run{color:var(--navy);background:rgba(10,37,64,.06)}
+.st-new{color:#B4441C;background:rgba(180,68,28,.06)}
+
+/* === Hero card === */
+.hero-card{background:var(--navy);color:#fff;border-radius:var(--radius-lg);padding:2rem;box-shadow:0 10px 15px rgba(0,0,0,.1);position:relative;overflow:hidden;max-width:380px;margin-top:1rem}
+.hero-card::before{content:"";position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(252,240,22,.2),transparent 60%);pointer-events:none}
+.hero-card-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amarelo);margin-bottom:.7rem;position:relative}
+.hero-card-big{font-family:'Plus Jakarta Sans',sans-serif;font-size:3.5rem;font-weight:800;line-height:1;letter-spacing:-0.03em;color:#fff;margin-bottom:.3rem;position:relative}
+.hero-card-title{font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.5rem;position:relative;font-family:'Plus Jakarta Sans',sans-serif}
+.hero-card-sub{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.55;position:relative}
+
+/* === Color swatches === */
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1rem}
+.swatch{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white)}
+.swatch-color{height:60px}
+.swatch-info{padding:.6rem .8rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--t3);letter-spacing:.05em}
+.swatch-info strong{display:block;color:var(--t1);font-size:.7rem;margin-bottom:.2rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:0}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>SEMAE · Components Reference</h1>
+<p>Visualização isolada de cada componente do design system para referência rápida e cópia.</p>
+
+<h2>Paleta <span>color swatches</span></h2>
+<div class="swatches">
+  <div class="swatch"><div class="swatch-color" style="background:#22562A"></div><div class="swatch-info"><strong>Verde primário</strong>--g2 · #22562A</div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#FCF016"></div><div class="swatch-info"><strong>Amarelo SEMAE</strong>--amarelo · #FCF016</div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#0A2540"></div><div class="swatch-info"><strong>Navy estratégico</strong>--navy · #0A2540</div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#F9FAFB;border-right:1px solid #ccc"></div><div class="swatch-info"><strong>Fundo institucional</strong>--bg · #F9FAFB</div></div>
+</div>
+
+<h2>Big Number <span>.bignum</span></h2>
+<div class="bignum-wrap">
+  <div class="bignum">
+    <div class="bignum-label">PIB Municipal · 2023</div>
+    <div class="bignum-val">R$ 469<small>,4 mi</small></div>
+    <div class="bignum-delta">+183,5% em 10 anos</div>
+    <div class="bignum-src">IBGE · Contas Regionais</div>
+  </div>
+  <div class="bignum">
+    <div class="bignum-label">Saldo Empregos · Jan-Fev 26</div>
+    <div class="bignum-val">+16</div>
+    <div class="bignum-delta">↑ Reversão de -5 em 2025</div>
+    <div class="bignum-src">CAGED · via Caravela</div>
+  </div>
+  <div class="bignum">
+    <div class="bignum-label">IDEB Anos Iniciais</div>
+    <div class="bignum-val">6<small>,3</small></div>
+    <div class="bignum-delta">↑ Top 6 do Amazonas</div>
+    <div class="bignum-src">INEP · Rede Estadual</div>
+  </div>
+</div>
+<div class="note">Uso: indicadores numéricos em grids 3×N. Em mobile colapsa para 1 coluna.</div>
+
+<h2>Tile Navy <span>.tile-navy</span></h2>
+<div class="tile-navy">
+  <div class="tile-lab">Nova Empresa · Tech · Destaque</div>
+  <div class="tile-val">Aqua Viridi</div>
+  <div class="tile-desc">Primeira biorrefinaria de microalgas da Amazônia — soluções biotecnológicas para agricultura, alimentação animal e indústria cosmética.</div>
+  <div class="tile-src">aquaviridi.com/pt ↗ · Projeção R$ 2 mi/ano</div>
+</div>
+<div class="note">Uso: destaque de conquistas-chave da gestão. Fundo navy com glow amarelo.</div>
+
+<h2>Hero Card <span>.hero-card</span></h2>
+<div class="hero-card">
+  <div class="hero-card-eyebrow">Marco fundacional · 04/06/2025</div>
+  <div class="hero-card-big">Lei<br>1.414</div>
+  <div class="hero-card-title">Criação da SEMAE</div>
+  <div class="hero-card-sub">Secretaria Municipal de Assuntos Estratégicos — institucionaliza o planejamento de longo prazo, a articulação intersetorial e a captação de recursos do município.</div>
+</div>
+<div class="note">Uso: card dominante no hero, ancorado em marco temporal ou conquista emblemática.</div>
+
+<h2>Stars Banner <span>.stars-banner</span></h2>
+<div class="stars-banner">
+  <div class="stars-eyebrow">★ As estrelas</div>
+  <div class="stars-text"><strong>Aqua Viridi</strong> e <strong>Maniocolor</strong> são as empresas de maior potencial entre as atraídas para Benjamin Constant — com possibilidade de construção de plantas piloto no município.</div>
+</div>
+<div class="note">Uso: faixa horizontal para destacar projetos prioritários sem precisar de seção própria.</div>
+
+<h2>Startup Chip <span>.startup-chip + .both</span></h2>
+<div class="chips">
+  <div class="startup-chip both" data-n="01"><strong>Puwakana</strong><span>Curadoria</span></div>
+  <div class="startup-chip both" data-n="02"><strong>Ikaben</strong><span>Tecnologia</span></div>
+  <div class="startup-chip" data-n="03"><strong>CicloTerra</strong><span>Agroecologia</span></div>
+  <div class="startup-chip" data-n="04"><strong>Piracy</strong><span>Pesca</span></div>
+  <div class="startup-chip both" data-n="05"><strong>Kaweru</strong><span>Povos</span></div>
+</div>
+<div class="note">Uso: lista de startups. Variante <code>.both</code> com borda amarela e estrela para itens que aparecem em mais de um ciclo/edital.</div>
+
+<h2>Obra Row <span>.obra</span></h2>
+<div class="obras">
+  <div class="obra">
+    <div class="obra-num">→ 01</div>
+    <div class="obra-title">Projeto Água Boa<small>Sistema de abastecimento de água na Comunidade Indígena Novo Porto Lima. 70 famílias beneficiadas.</small></div>
+    <div class="obra-val">R$ 4,9 mi<small>340 PESSOAS</small></div>
+    <div class="obra-src">Gov. AM · UGPE</div>
+    <div class="obra-status st-done">Entregue 11/2025</div>
+  </div>
+  <div class="obra">
+    <div class="obra-num">→ 02</div>
+    <div class="obra-title">Infovia 02 · Norte Conectado<small>1.100 km de fibra óptica subfluvial no rio Solimões.</small></div>
+    <div class="obra-val">R$ 268 mi<small>12 MUNICÍPIOS</small></div>
+    <div class="obra-src">Min. Comunicações</div>
+    <div class="obra-status st-run">Em execução</div>
+  </div>
+</div>
+<div class="note">Uso: lista de obras/projetos com hierarquia clara. 5 colunas no desktop, colapsa para 2 colunas em mobile.</div>
+
+</div>
+</body>
+</html>

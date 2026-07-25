@@ -1,0 +1,132 @@
+{
+  "name": "SEMAE Design System",
+  "version": "2.0.0",
+  "description": "Sistema de design da Secretaria Municipal de Assuntos Estratégicos de Benjamin Constant — Gestão Semeide Bermeguy Porto 2025–2028",
+  "lastUpdated": "2026-04-13",
+
+  "color": {
+    "brand": {
+      "green": {
+        "darkest":  { "value": "#0F3A12", "description": "Verde mais escuro (rodapés, hovers profundos)" },
+        "primary":  { "value": "#22562A", "description": "Verde SEMAE principal — extraído do lettering da logo" },
+        "medium":   { "value": "#2A6B2E", "description": "Verde médio (acentos secundários)" },
+        "light":    { "value": "#3D8C42", "description": "Verde claro (destaques, hovers)" },
+        "tint":     { "value": "#E8F1E5", "description": "Verde tint (fundos sutis, badges)" }
+      },
+      "yellow": {
+        "primary":  { "value": "#FCF016", "description": "Amarelo seta SEMAE — destaques, CTAs" },
+        "vibrant":  { "value": "#FCE615", "description": "Amarelo vibrante (variação)" }
+      },
+      "navy": {
+        "darkest":  { "value": "#0A2540", "description": "Navy institucional — cards de destaque, rodapés" },
+        "dark":     { "value": "#0d2d4d", "description": "Navy variação 1" },
+        "medium":   { "value": "#143861", "description": "Navy variação 2" }
+      }
+    },
+    "neutral": {
+      "background": {
+        "primary":   { "value": "#F9FAFB", "description": "Fundo principal institucional" },
+        "secondary": { "value": "#F4F7F1", "description": "Fundo secundário (verde quase imperceptível)" },
+        "white":     { "value": "#FFFFFF", "description": "Cards, navbar" }
+      },
+      "border": {
+        "default": { "value": "#E5E7EB" },
+        "strong":  { "value": "#D1D5DB" }
+      },
+      "text": {
+        "primary":   { "value": "#0B1220", "description": "Títulos, valores em destaque" },
+        "secondary": { "value": "#374151", "description": "Corpo de texto" },
+        "tertiary":  { "value": "#6B7280", "description": "Texto secundário, legendas" },
+        "muted":     { "value": "#9CA3AF", "description": "Placeholder, texto desativado" }
+      }
+    },
+    "semantic": {
+      "success":  { "value": "#22562A", "description": "Verde SEMAE = sucesso (entrega, conquista)" },
+      "running":  { "value": "#0A2540", "description": "Navy = em andamento" },
+      "alert":    { "value": "#B4441C", "description": "Vermelho-terra = atenção / novo" }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display":   { "value": "'Plus Jakarta Sans', sans-serif", "description": "Títulos, valores em destaque" },
+      "body":      { "value": "'DM Sans', sans-serif", "description": "Corpo de texto" },
+      "monospace": { "value": "'JetBrains Mono', monospace", "description": "Labels, dados técnicos, eyebrows" }
+    },
+    "fontWeight": {
+      "display": { "regular": 500, "semibold": 600, "bold": 700, "extrabold": 800 },
+      "body":    { "light": 300, "regular": 400, "medium": 500, "semibold": 600 },
+      "mono":    { "regular": 400, "medium": 500, "semibold": 600 }
+    },
+    "fontSize": {
+      "xs":   { "value": "0.62rem" },
+      "sm":   { "value": "0.78rem" },
+      "base": { "value": "1rem" },
+      "lg":   { "value": "1.15rem" },
+      "xl":   { "value": "1.5rem" },
+      "2xl":  { "value": "2rem" },
+      "3xl":  { "value": "clamp(2rem, 4vw, 3.2rem)" },
+      "4xl":  { "value": "clamp(2.4rem, 5vw, 4.2rem)" },
+      "5xl":  { "value": "clamp(3rem, 8vw, 7rem)" }
+    },
+    "letterSpacing": {
+      "tight":  "-0.035em",
+      "tighter": "-0.025em",
+      "normal":  "0",
+      "wide":    "0.1em",
+      "wider":   "0.2em"
+    }
+  },
+
+  "spacing": {
+    "container": { "maxWidth": "1320px", "padding": "0 2rem" },
+    "section":   { "paddingY": "5rem" },
+    "gap": {
+      "xs": "0.4rem",
+      "sm": "0.7rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem"
+    }
+  },
+
+  "radius": {
+    "sm":   "6px",
+    "md":   "10px",
+    "lg":   "14px",
+    "pill": "24px"
+  },
+
+  "shadow": {
+    "sm": "0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04)",
+    "md": "0 4px 6px rgba(0,0,0,.05), 0 2px 4px rgba(0,0,0,.04)",
+    "lg": "0 10px 15px rgba(0,0,0,.06), 0 4px 6px rgba(0,0,0,.04)",
+    "navy": "0 10px 20px rgba(10,37,64,.2)"
+  },
+
+  "breakpoint": {
+    "mobile":  "700px",
+    "tablet":  "900px",
+    "desktop": "1100px"
+  },
+
+  "typography_pairing": {
+    "display+body":  "Plus Jakarta Sans (700/800) + DM Sans (300/400)",
+    "label+value":   "JetBrains Mono (500) + Plus Jakarta Sans (800)",
+    "description":   "Hierarquia clara: monoespaçada para labels técnicos, serif sans para títulos institucionais, sans para leitura corrida"
+  },
+
+  "vocabulary_rules": {
+    "forbidden": [
+      "ecossistema (substituir por: 'atuação estratégica', 'rede municipal', 'articulação', 'microcosmo de inovação', 'tecido institucional')",
+      "Fale Conosco (substituir por: 'Conecte-se')"
+    ],
+    "required": [
+      "Numerais com zero à esquerda: Eixo 01, Eixo 02, Eixo 03",
+      "INPACTAS sempre em caixa alta",
+      "DataB e RHISA com capitalização exata",
+      "Sem emojis em documentos institucionais"
+    ]
+  }
+}
