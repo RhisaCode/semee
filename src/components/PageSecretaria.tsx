@@ -1,3 +1,6 @@
+// Lei nº 1.433/2025 — PDF hospedado no próprio site (public/), sem dependência externa
+const LEI_PDF = '/lei-1433-2025.pdf';
+
 export default function PageSecretaria() {
   return (
     <div className="page active" id="page-secretaria">
@@ -5,23 +8,29 @@ export default function PageSecretaria() {
       <section className="section">
         <div className="container">
           <div className="section-eyebrow">A Secretaria</div>
-          <h2>Estrutura, atuação e fundamento legal.</h2>
-          <p className="sub">A Secretaria Municipal de Empreendedorismo e Emprego — SEMEE — integra a estrutura administrativa da Prefeitura de Benjamin Constant com a finalidade de formular e executar as políticas municipais de empreendedorismo, trabalho, emprego e geração de renda. É a casa do empreendedor e do trabalhador benjaminense dentro do Poder Executivo Municipal.</p>
+          <h2>Estrutura, competências e fundamento legal.</h2>
+          <p className="sub">A Secretaria Municipal de Empreendedorismo e Emprego — SEMEE — foi criada pela Lei Municipal nº 1.433, de 26 de setembro de 2025, que desmembrou a antiga Secretaria de Empreendedorismo e Turismo (SEMET). Sua finalidade, definida no Art. 10, é planejar, coordenar e executar as políticas públicas voltadas ao incentivo ao empreendedorismo, ao emprego, ao apoio a micro e pequenos negócios e ao fortalecimento da economia local.</p>
         </div>
       </section>
 
       <section className="section section-alt" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div className="section-eyebrow reveal" style={{ marginTop: '3rem' }}>Frentes de atuação</div>
-          <h2 className="reveal reveal-delay-1" style={{ marginBottom: '2.5rem' }}>O que a SEMEE faz no dia a dia</h2>
+          <div className="section-eyebrow reveal" style={{ marginTop: '3rem' }}>Competências legais · Art. 10 · Lei nº 1.433/2025</div>
+          <h2 className="reveal reveal-delay-1" style={{ marginBottom: '2.5rem' }}>Oito frentes de atuação institucional</h2>
 
           <div className="comp-grid">
-            <div className="comp-card reveal"><div className="comp-num">§ 01</div><h4>Sala do Empreendedor</h4><p>Atendimento presencial há 8 anos: abertura de MEI, regularização, alvará e orientação a pequenos negócios.</p></div>
-            <div className="comp-card reveal reveal-delay-1"><div className="comp-num">§ 02</div><h4>Intermediação de emprego</h4><p>Operação do SINE municipal: cadastro de trabalhadores, vagas e encaminhamento para oportunidades.</p></div>
-            <div className="comp-card reveal reveal-delay-2"><div className="comp-num">§ 03</div><h4>Fomento a startups</h4><p>Editais de Capital Semente e apoio à inovação — 11 startups selecionadas no primeiro edital municipal.</p></div>
-            <div className="comp-card reveal reveal-delay-3"><div className="comp-num">§ 04</div><h4>Qualificação profissional</h4><p>Cursos e formações em parceria com Sebrae, instituições de ensino e o Sistema S.</p></div>
-            <div className="comp-card reveal"><div className="comp-num">§ 05</div><h4>Feiras e economia local</h4><p>Apoio a feiras indígenas, feiras de empreendedores e circuitos de comercialização da produção local.</p></div>
-            <div className="comp-card reveal reveal-delay-1"><div className="comp-num">§ 06</div><h4>Trabalho formalizado</h4><p>Cadastro municipal de trabalhadores eventuais e empresas prestadoras de serviço — a Plataforma ContrataBC.</p></div>
+            <div className="comp-card reveal"><div className="comp-num">§ 01</div><h4>Capacitação e formação empreendedora</h4><p>Programas de capacitação profissional e formação empreendedora em parceria com o Sistema S (Sebrae, Senai, Senac), universidades e instituições de ensino.</p></div>
+            <div className="comp-card reveal reveal-delay-1"><div className="comp-num">§ 02</div><h4>Crédito e financiamento</h4><p>Políticas de apoio ao crédito e acesso a financiamentos para pequenos negócios locais, em parceria com instituições financeiras.</p></div>
+            <div className="comp-card reveal reveal-delay-2"><div className="comp-num">§ 03</div><h4>Feiras e rodadas de negócios</h4><p>Promoção de feiras, rodadas de negócios e eventos que estimulem o comércio local e a integração de empreendedores.</p></div>
+            <div className="comp-card reveal reveal-delay-3"><div className="comp-num">§ 04</div><h4>Emprego e renda</h4><p>Programas de geração de emprego e renda, articulando intermediação de mão de obra e qualificação profissional.</p></div>
+            <div className="comp-card reveal"><div className="comp-num">§ 05</div><h4>Banco de Oportunidades</h4><p>Manutenção do Banco Municipal de Oportunidades de Emprego, articulando vagas junto a empresas e instituições locais.</p></div>
+            <div className="comp-card reveal reveal-delay-1"><div className="comp-num">§ 06</div><h4>Juventude</h4><p>Articulação de políticas públicas de juventude voltadas à inserção no mercado de trabalho.</p></div>
+            <div className="comp-card reveal reveal-delay-2"><div className="comp-num">§ 07</div><h4>Economia solidária</h4><p>Parcerias com órgãos públicos e privados para incentivo à economia solidária e ao cooperativismo.</p></div>
+            <div className="comp-card reveal reveal-delay-3"><div className="comp-num">§ 08</div><h4>Inclusão produtiva</h4><p>Projetos de apoio à empregabilidade de mulheres, jovens, pessoas com deficiência e demais grupos em situação de vulnerabilidade social.</p></div>
+          </div>
+
+          <div className="painel-note reveal">
+            A SEMEE acumula ainda as atribuições do Art. 115 da Lei nº 1.398/2024: formalização de empresas, mentorias e consultorias a empreendedores, fomento a incubadoras e polos de inovação, e atração de investimentos para a região.
           </div>
         </div>
       </section>
@@ -50,10 +59,10 @@ export default function PageSecretaria() {
 
           <div className="lei-box reveal">
             <div>
-              <h4>Lei municipal de criação da SEMEE</h4>
-              <p>O texto integral da lei que institui a Secretaria Municipal de Empreendedorismo e Emprego será disponibilizado aqui em PDF.</p>
+              <h4>Lei Municipal nº 1.433, de 26 de setembro de 2025</h4>
+              <p>Desmembra a Secretaria Municipal de Empreendedorismo e Turismo, cria a SEMEE e a SEMTUR e define as competências da Secretaria. Publicada no Diário Oficial dos Municípios do Amazonas em 29/09/2025 (edição 3.950).</p>
             </div>
-            <a href="#" onClick={(e) => e.preventDefault()} aria-disabled="true" style={{ opacity: .75, cursor: 'default' }}>Em breve · PDF</a>
+            <a href={LEI_PDF} target="_blank" rel="noopener noreferrer">Ver Lei (PDF) ↗</a>
           </div>
         </div>
       </section>

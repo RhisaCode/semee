@@ -66,7 +66,7 @@ export default function PageContato() {
                   <label>Assunto</label>
                   <select>
                     <option>Abrir ou regularizar empresa</option>
-                    <option>Vagas de emprego (SINE)</option>
+                    <option>Vagas de emprego (SIME)</option>
                     <option>Cadastro ContrataBC</option>
                     <option>Cursos e formações</option>
                     <option>Editais e fomento</option>

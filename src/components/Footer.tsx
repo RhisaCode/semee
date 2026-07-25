@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div>
               <img className="footer-logo" src="/logo-prefeitura.png" alt="Prefeitura de Benjamin Constant" />
-              <p className="footer-text">Secretaria Municipal de Empreendedorismo e Emprego da Prefeitura de Benjamin Constant — Amazonas. Vice-campeã nacional do XIII Prêmio Sebrae Prefeitura Empreendedora.</p>
+              <p className="footer-text">Secretaria Municipal de Empreendedorismo e Emprego da Prefeitura de Benjamin Constant — Amazonas. Criada pela Lei nº 1.433, de 26 de setembro de 2025. Vice-campeã nacional do XIII Prêmio Sebrae Prefeitura Empreendedora.</p>
             </div>
             <div>
               <h5>Institucional</h5>

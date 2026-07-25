@@ -8,7 +8,7 @@ Site da **Secretaria Municipal de Empreendedorismo e Emprego (SEMEE)** da Prefei
 
 ## Abas
 
-Quem Somos · A Secretaria · Serviços · Notícias · Plataforma ContrataBC · SINE · Contato
+Quem Somos · A Secretaria · Serviços · Notícias · Plataforma ContrataBC · SIME · Contato
 
 ## Desenvolvimento
 
@@ -27,5 +27,5 @@ Paleta extraída da logomarca oficial da SEMEE (`brand/`): verde `#37B54A`, azul
 - [ ] Lei municipal de criação da SEMEE (PDF em `public/` + número/data na aba A Secretaria)
 - [ ] Fotos da equipe, Sala do Empreendedor e feiras
 - [ ] Integração do formulário de contato (Formspree/EmailJS)
-- [ ] Painel de vagas do SINE
+- [ ] Painel de vagas do SIME
 - [ ] Cadastro on-line do ContrataBC

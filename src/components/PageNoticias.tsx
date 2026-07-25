@@ -31,6 +31,13 @@ const noticias: Noticia[] = [
     badge: { label: 'Edital', cls: 'badge-green' },
   },
   {
+    dia: '29', mes: 'SET', ano: '2025',
+    titulo: 'Lei nº 1.433/2025 cria a Secretaria Municipal de Empreendedorismo e Emprego',
+    texto: 'Sancionada pelo prefeito Semeide Bermeguy Porto, a Lei Municipal nº 1.433, de 26 de setembro de 2025, desmembrou a antiga SEMET e criou a SEMEE, com a missão de planejar e executar as políticas de empreendedorismo, emprego e apoio aos micro e pequenos negócios do município.',
+    meta: 'INSTITUCIONAL · DOM/AM EDIÇÃO 3.950',
+    badge: { label: 'Lei', cls: 'badge-green' },
+  },
+  {
     dia: '12', mes: 'MAR', ano: '2025',
     titulo: 'Município renova com o Sebrae e adere ao ciclo 2025 do Cidade Empreendedora',
     texto: 'Ao longo de 16 meses, o programa Cidade Empreendedora executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas em Benjamin Constant — da desburocratização às compras públicas de pequenos negócios. O município renovou a parceria para o novo ciclo.',

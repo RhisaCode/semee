@@ -11,7 +11,7 @@ export default function PageQuemSomos({ onNavigate }: Props) {
       <section className="hero">
         <div className="hero-inner">
           <div>
-            <div className="hero-eyebrow">Prefeitura de Benjamin Constant · Amazonas</div>
+            <div className="hero-eyebrow">Lei Municipal nº 1.433 / 2025 · Benjamin Constant · AM</div>
             <h1>Onde quem trabalha e empreende <span className="accent">encontra apoio</span>.</h1>
             <p className="lead">A SEMEE — Secretaria Municipal de Empreendedorismo e Emprego — apoia quem quer abrir, regularizar e crescer o próprio negócio, e conecta trabalhadores às oportunidades de emprego e renda de Benjamin Constant.</p>
             <div className="hero-actions">
@@ -52,7 +52,7 @@ export default function PageQuemSomos({ onNavigate }: Props) {
       <div className="eixos-strip reveal">
         <div className="eixos-grid">
           <div className="eixo reveal reveal-delay-1"><div className="eixo-num">01</div><div className="eixo-content"><h4>Empreendedorismo</h4><p>Abertura, regularização e crescimento de negócios locais.</p></div></div>
-          <div className="eixo reveal reveal-delay-2"><div className="eixo-num">02</div><div className="eixo-content"><h4>Emprego &amp; Renda</h4><p>Intermediação de mão de obra e oportunidades pelo SINE.</p></div></div>
+          <div className="eixo reveal reveal-delay-2"><div className="eixo-num">02</div><div className="eixo-content"><h4>Emprego &amp; Renda</h4><p>Intermediação de mão de obra e oportunidades pelo SIME.</p></div></div>
           <div className="eixo reveal reveal-delay-3"><div className="eixo-num">03</div><div className="eixo-content"><h4>Qualificação</h4><p>Cursos e formações para empreendedores e trabalhadores.</p></div></div>
           <div className="eixo reveal reveal-delay-4"><div className="eixo-num">04</div><div className="eixo-content"><h4>Trabalho Formalizado</h4><p>Cadastro e valorização de trabalhadores eventuais e prestadores.</p></div></div>
         </div>
@@ -78,7 +78,7 @@ export default function PageQuemSomos({ onNavigate }: Props) {
         <div className="container">
           <div className="section-eyebrow reveal">Quem Somos</div>
           <h2 className="reveal reveal-delay-1">Uma secretaria dedicada a quem produz, emprega e trabalha.</h2>
-          <p className="sub reveal reveal-delay-2">A SEMEE é o órgão da Prefeitura de Benjamin Constant responsável pelas políticas municipais de empreendedorismo, trabalho, emprego e renda. Atua da Sala do Empreendedor ao SINE, dos editais de fomento à qualificação profissional — sempre com atendimento próximo de quem vive a economia real do município.</p>
+          <p className="sub reveal reveal-delay-2">A SEMEE é o órgão da Prefeitura de Benjamin Constant responsável pelas políticas municipais de empreendedorismo, trabalho, emprego e renda. Atua da Sala do Empreendedor ao SIME, dos editais de fomento à qualificação profissional — sempre com atendimento próximo de quem vive a economia real do município.</p>
 
           <div className="missao-grid">
             <div className="missao-quote reveal reveal-delay-1">

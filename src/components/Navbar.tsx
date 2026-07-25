@@ -12,7 +12,7 @@ const tabs: { id: TabId; label: string }[] = [
   { id: 'servicos',   label: 'Serviços' },
   { id: 'noticias',   label: 'Notícias' },
   { id: 'contratabc', label: 'ContrataBC' },
-  { id: 'sine',       label: 'SINE' },
+  { id: 'sime',       label: 'SIME' },
 ];
 
 export default function Navbar({ activeTab, onNavigate }: Props) {

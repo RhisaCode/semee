@@ -6,11 +6,11 @@ import PageSecretaria from './components/PageSecretaria';
 import PageServicos from './components/PageServicos';
 import PageNoticias from './components/PageNoticias';
 import PageContrataBC from './components/PageContrataBC';
-import PageSine from './components/PageSine';
+import PageSime from './components/PageSime';
 import PageContato from './components/PageContato';
 import { useReveal } from './hooks/useReveal';
 
-export type TabId = 'quemsomos' | 'secretaria' | 'servicos' | 'noticias' | 'contratabc' | 'sine' | 'contato';
+export type TabId = 'quemsomos' | 'secretaria' | 'servicos' | 'noticias' | 'contratabc' | 'sime' | 'contato';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>('quemsomos');
@@ -30,7 +30,7 @@ export default function App() {
       {activeTab === 'servicos' && <PageServicos onNavigate={navigate} />}
       {activeTab === 'noticias' && <PageNoticias />}
       {activeTab === 'contratabc' && <PageContrataBC onNavigate={navigate} />}
-      {activeTab === 'sine' && <PageSine onNavigate={navigate} />}
+      {activeTab === 'sime' && <PageSime onNavigate={navigate} />}
       {activeTab === 'contato' && <PageContato />}
       <Footer />
     </>

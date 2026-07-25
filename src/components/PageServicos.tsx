@@ -12,7 +12,7 @@ export default function PageServicos({ onNavigate }: Props) {
         <div className="container">
           <div className="section-eyebrow">Serviços</div>
           <h2>O que a SEMEE oferece a você.</h2>
-          <p className="sub">Serviços gratuitos para quem quer empreender, trabalhar ou contratar em Benjamin Constant. O atendimento presencial é feito na Sala do Empreendedor e no posto do SINE, e parte dos serviços já pode ser iniciada por aqui.</p>
+          <p className="sub">Serviços gratuitos para quem quer empreender, trabalhar ou contratar em Benjamin Constant. O atendimento presencial é feito na Sala do Empreendedor e no atendimento do SIME, e parte dos serviços já pode ser iniciada por aqui.</p>
 
           <div className="svc-grid">
 
@@ -30,8 +30,8 @@ export default function PageServicos({ onNavigate }: Props) {
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
               <h4>Oportunidades de emprego</h4>
-              <p>Cadastro de currículo, consulta de vagas e encaminhamento para entrevistas pelo posto municipal do SINE.</p>
-              <button className="svc-link" onClick={() => onNavigate('sine')}>Ir para o SINE →</button>
+              <p>Cadastro de currículo, consulta de vagas e encaminhamento para entrevistas pelo SIME — Sistema Municipal de Emprego.</p>
+              <button className="svc-link" onClick={() => onNavigate('sime')}>Ir para o SIME →</button>
             </div>
 
             <div className="svc-card reveal reveal-delay-2">
