@@ -1,0 +1,130 @@
+export interface NoticiaVideo {
+  src: string;
+  poster: string;
+  titulo: string;
+}
+
+export interface Noticia {
+  dia: string;
+  mes: string;
+  ano: string;
+  titulo: string;
+  /** Versão curta usada no ticker de últimas notícias */
+  curto?: string;
+  texto: string;
+  meta: string;
+  badge: { label: string; cls: string };
+  videos?: NoticiaVideo[];
+  link?: { href: string; label: string };
+}
+
+export const noticias: Noticia[] = [
+  {
+    dia: '30', mes: 'JUL', ano: '2026',
+    titulo: 'I Foro de Inovação Microcosmos reúne instituições de todo o país em Benjamin Constant',
+    curto: 'I Foro de Inovação Microcosmos: 30 e 31 de julho em Benjamin Constant',
+    texto: 'Nos dias 30 e 31 de julho, Benjamin Constant recebe o I Foro de Inovação Microcosmos, com 26 instituições convidadas para discutir inovação, empreendedorismo e desenvolvimento no interior da Amazônia. A SEMEE participa apresentando as políticas municipais de empreendedorismo e emprego.',
+    meta: 'AGENDA · BENJAMIN CONSTANT/AM',
+    badge: { label: 'Agenda', cls: 'badge-blue' },
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: '1º Feirão de Crédito aproxima quem empreende das instituições financeiras',
+    curto: '1º Feirão de Crédito de Benjamin Constant',
+    texto: 'Benjamin Constant realizou o seu primeiro Feirão de Crédito, reunindo empreendedores e instituições financeiras em um só lugar para orientar, tirar dúvidas e abrir caminho até as linhas de crédito. De auditório cheio, a ação atacou um dos gargalos mais citados por quem empreende no Alto Solimões: o acesso a financiamento para abrir ou fazer crescer o próprio negócio.',
+    meta: 'SEMEE EM AÇÃO · CRÉDITO E FOMENTO',
+    badge: { label: 'Ação', cls: 'badge-green' },
+    videos: [
+      { src: '/noticias/feirao-credito.mp4', poster: '/noticias/feirao-credito.jpg', titulo: '1º Feirão de Crédito de Benjamin Constant' },
+    ],
+    link: { href: 'https://www.instagram.com/reel/DVyGnetgibL/', label: 'Assista no Instagram →' },
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'Artesanato Ticuna de Benjamin Constant caminha para ser a primeira Indicação Geográfica indígena do Amazonas',
+    curto: 'Artesanato Ticuna rumo à 1ª Indicação Geográfica indígena do Amazonas',
+    texto: 'O Artesanato Ticuna deu um passo decisivo rumo ao reconhecimento oficial: já foi assinada a documentação que compõe o Instrumento Oficial da Indicação Geográfica (IG), etapa necessária para protocolar o registro no INPI. Com apoio do Sebrae, será a primeira IG voltada ao artesanato indígena no Amazonas — um selo que valoriza a origem, protege o saber tradicional e agrega valor ao trabalho das artesãs e dos artesãos do território.',
+    meta: 'CULTURA EMPREENDEDORA · SEBRAE/AM · INPI',
+    badge: { label: 'Reconhecimento', cls: 'badge-yellow' },
+    link: { href: 'https://am.agenciasebrae.com.br/cultura-empreendedora/sebrae-apoia-processo-da-indicacao-geografica-do-artesanato-ticuna-de-benjamin-constant/', label: 'Leia na Agência Sebrae de Notícias →' },
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'Um encontro para tecer negócios: polo regional de artesanato une cultura e renda',
+    curto: 'Polo regional de artesanato: difundindo a cultura e gerando renda',
+    texto: 'Artesãs e artesãos do território expuseram e venderam sua produção no polo regional de artesanato, em um encontro que uniu cultura e negócio. Cestarias, cerâmicas e peças tradicionais ganharam vitrine — e a renda gerada fica onde importa: na mão de quem produz.',
+    meta: 'SEMEE EM AÇÃO · ARTESANATO',
+    badge: { label: 'Cultura', cls: 'badge-blue' },
+    videos: [
+      { src: '/noticias/tecer-negocios.mp4', poster: '/noticias/tecer-negocios.jpg', titulo: 'Um Encontro Para Tecer Negócios' },
+      { src: '/noticias/cultura-renda.mp4', poster: '/noticias/cultura-renda.jpg', titulo: 'Difundindo a Cultura e Gerando Renda' },
+    ],
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'Feirão do MEI leva capacitação e apoio a quem quer desenvolver o próprio negócio',
+    curto: 'Feirão do MEI: capacitação para pequenos empreendedores',
+    texto: 'Formalização, gestão e crescimento: o Feirão do MEI ofereceu capacitação para microempreendedores individuais e atendimento de apoio ao desenvolvimento de negócios. As turmas cheias mostram o tamanho da demanda — e a disposição de quem empreende em Benjamin Constant para se qualificar.',
+    meta: 'SEMEE EM AÇÃO · CAPACITAÇÃO · MEI',
+    badge: { label: 'Capacitação', cls: 'badge-green' },
+    videos: [
+      { src: '/noticias/feirao-mei.mp4', poster: '/noticias/feirao-mei.jpg', titulo: 'Feirão do MEI — Capacitação' },
+      { src: '/noticias/apoio-negocios.mp4', poster: '/noticias/apoio-negocios.jpg', titulo: 'Apoio para Desenvolver Negócios' },
+    ],
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'I Workshop "Diversidade que Empreende" promove inclusão e autonomia',
+    curto: 'I Workshop Diversidade que Empreende: empreendedorismo para todos',
+    texto: 'Empreendedorismo para todos: o I Workshop Diversidade que Empreende reuniu participantes para discutir inclusão produtiva e autonomia econômica, mostrando que empreender também é porta de entrada para quem historicamente ficou de fora. A ação foi realizada com participação da SEMEE e de parceiros do Alto Solimões.',
+    meta: 'SEMEE EM AÇÃO · INCLUSÃO PRODUTIVA',
+    badge: { label: 'Inclusão', cls: 'badge-blue' },
+    videos: [
+      { src: '/noticias/workshop-diversidade.mp4', poster: '/noticias/workshop-diversidade.jpg', titulo: 'I Workshop: Diversidade que Empreende' },
+    ],
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'XXX JEAS 2026: quando o esporte entra em campo, a economia também vence',
+    curto: 'XXX JEAS 2026: esporte movimentando a economia local',
+    texto: 'A 30ª edição dos Jogos Estudantis do Alto Solimões (JEAS) movimenta muito mais do que as quadras: delegações de toda a região aquecem hospedagem, alimentação, transporte e o comércio local. Para a SEMEE, grandes eventos como o JEAS também são política econômica — oportunidade de renda para quem empreende na cidade.',
+    meta: 'SEMEE EM AÇÃO · ESPORTE E ECONOMIA',
+    badge: { label: 'Economia', cls: 'badge-yellow' },
+    videos: [
+      { src: '/noticias/jeas-2026.mp4', poster: '/noticias/jeas-2026.jpg', titulo: 'XXX JEAS 2026' },
+    ],
+  },
+  {
+    dia: '18', mes: 'MAI', ano: '2026',
+    titulo: 'Benjamin Constant é vice-campeã nacional do Prêmio Sebrae Prefeitura Empreendedora',
+    curto: 'Benjamin Constant: vice-campeã nacional do Prêmio Sebrae Prefeitura Empreendedora',
+    texto: 'O projeto "Benjamin Constant Inovadora: Capital Semente e Feiras Indígenas" venceu a etapa estadual do Amazonas, liderou a Região Norte e conquistou o 2º lugar do Brasil na categoria Gestão Inovadora do XIII Prêmio Sebrae Prefeitura Empreendedora, entre mais de 5,5 mil municípios. A entrega aconteceu em cerimônia nacional em Brasília.',
+    meta: 'RECONHECIMENTO · XIII PSPE · BRASÍLIA/DF',
+    badge: { label: 'Prêmio', cls: 'badge-yellow' },
+    link: { href: 'https://agenciasebrae.com.br/economia-e-politica/conheca-os-municipios-reconhecidos-por-apoiar-o-empreendedorismo-brasileiro/', label: 'Veja a lista dos municípios premiados →' },
+  },
+  {
+    dia: '03', mes: 'OUT', ano: '2025',
+    titulo: 'Capital Semente: R$ 66 mil investidos e 11 startups selecionadas em edital histórico',
+    texto: 'Benjamin Constant tornou-se um dos primeiros municípios do interior do Amazonas a investir recursos próprios em startups locais. O edital Capital Semente selecionou 11 negócios inovadores, que receberam aporte e acompanhamento para desenvolver suas soluções.',
+    meta: 'FOMENTO · EDITAL CAPITAL SEMENTE',
+    badge: { label: 'Edital', cls: 'badge-green' },
+  },
+  {
+    dia: '29', mes: 'SET', ano: '2025',
+    titulo: 'Lei nº 1.433/2025 cria a Secretaria Municipal de Empreendedorismo e Emprego',
+    texto: 'Sancionada pelo prefeito Semeide Bermeguy Porto, a Lei Municipal nº 1.433, de 26 de setembro de 2025, desmembrou a antiga SEMET e criou a SEMEE, com a missão de planejar e executar as políticas de empreendedorismo, emprego e apoio aos micro e pequenos negócios do município.',
+    meta: 'INSTITUCIONAL · DOM/AM EDIÇÃO 3.950',
+    badge: { label: 'Lei', cls: 'badge-green' },
+  },
+  {
+    dia: '12', mes: 'MAR', ano: '2025',
+    titulo: 'Município renova com o Sebrae e adere ao ciclo 2025 do Cidade Empreendedora',
+    texto: 'Ao longo de 16 meses, o programa Cidade Empreendedora executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas em Benjamin Constant — da desburocratização às compras públicas de pequenos negócios. O município renovou a parceria para o novo ciclo.',
+    meta: 'PARCERIA · SEBRAE/AM',
+    badge: { label: 'Programa', cls: 'badge-green' },
+  },
+];
+
+/** Manchetes do ticker: as notícias mais recentes, em versão curta. */
+export const manchetes: string[] = noticias.slice(0, 8).map((n) => n.curto ?? n.titulo);

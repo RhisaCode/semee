@@ -6,7 +6,7 @@ body{
   background:var(--bg);color:var(--t2);
   font-family:'DM Sans',sans-serif;font-weight:400;line-height:1.55;
   -webkit-font-smoothing:antialiased;
-  padding-top:72px;
+  padding-top:110px; /* navbar 72px + ticker 38px */
 }
 h1,h2,h3,h4,h5{font-family:'Plus Jakarta Sans',sans-serif;color:var(--t1);font-weight:700;letter-spacing:-0.01em}
 a{color:inherit;text-decoration:none}
@@ -264,6 +264,37 @@ nav.navbar{
   font-size:.8rem;color:var(--t3);font-style:italic
 }
 
+/* ===== TICKER DE ÚLTIMAS NOTÍCIAS ===== */
+.news-ticker{
+  position:fixed;top:72px;left:0;right:0;z-index:190;height:38px;
+  background:var(--navy);display:flex;align-items:stretch;overflow:hidden;
+  cursor:pointer;border-bottom:1px solid var(--navy2)
+}
+.ticker-label{
+  flex-shrink:0;display:flex;align-items:center;padding:0 1rem;
+  background:var(--amarelo);color:var(--navy);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.6rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase
+}
+.ticker-viewport{
+  flex:1;overflow:hidden;display:flex;align-items:center;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)
+}
+.ticker-track{
+  display:inline-flex;white-space:nowrap;padding-left:1.2rem;
+  animation:ticker-scroll 64s linear infinite;will-change:transform
+}
+.news-ticker:hover .ticker-track,
+.news-ticker:focus-visible .ticker-track{animation-play-state:paused}
+.ticker-item{display:inline-flex;align-items:center;color:#fff;font-size:.76rem;font-weight:500}
+.ticker-sep{color:var(--amarelo);margin:0 1.1rem;font-size:.45rem}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  .ticker-viewport{overflow-x:auto}
+}
+
 /* ===== NOTÍCIAS (lista) ===== */
 .conv-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
 .conv-item{
@@ -277,6 +308,37 @@ nav.navbar{
 .conv-h{font-size:.92rem;font-weight:700;color:var(--t1);margin-bottom:.3rem}
 .conv-p{font-size:.78rem;color:var(--t3);line-height:1.55}
 .conv-meta{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--t4);margin-top:.4rem;letter-spacing:.05em}
+.conv-item--media{align-items:start}
+.conv-item--media .badge{align-self:start}
+.conv-media{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+.conv-video{
+  position:relative;height:230px;border-radius:8px;overflow:hidden;
+  border:0;padding:0;background:var(--t1);cursor:pointer;flex:0 0 auto;
+  max-width:100%;box-shadow:var(--shadow-sm)
+}
+.conv-video img,.conv-video video{height:100%;width:auto;max-width:100%;display:block;object-fit:cover}
+.conv-video img{transition:transform .3s ease,opacity .3s}
+.conv-video:hover img{transform:scale(1.03);opacity:.92}
+.conv-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(22,84,143,.88);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);transition:background .18s,transform .18s;
+  pointer-events:none
+}
+.conv-video:hover .conv-play{background:var(--g2);transform:translate(-50%,-50%) scale(1.08)}
+.conv-video-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:1.4rem .7rem .5rem;
+  background:linear-gradient(transparent,rgba(0,0,0,.72));
+  color:#fff;font-size:.62rem;font-weight:600;letter-spacing:.03em;text-align:left;
+  pointer-events:none
+}
+.conv-link{
+  display:inline-block;margin-top:.8rem;font-size:.76rem;font-weight:700;
+  color:var(--navy);transition:color .18s
+}
+.conv-link:hover{color:var(--g2)}
 
 .badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;white-space:nowrap}
 .badge-green{background:rgba(31,122,52,.1);color:var(--g2)}
@@ -371,6 +433,9 @@ footer ul{list-style:none}
 }
 @media (max-width:600px){
   .nav-brand-symbol{height:38px}
+  .ticker-label{padding:0 .7rem;font-size:.55rem}
+  .ticker-item{font-size:.72rem}
+  .conv-video{height:180px}
   .hero h1{font-size:1.7rem}
   .eixos-grid{grid-template-columns:1fr;gap:1.2rem}
   .kpi-mini{grid-template-columns:1fr 1fr}

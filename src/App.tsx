@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
+import NewsTicker from './components/NewsTicker';
 import Footer from './components/Footer';
 import PageQuemSomos from './components/PageQuemSomos';
 import PageSecretaria from './components/PageSecretaria';
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <>
       <Navbar activeTab={activeTab} onNavigate={navigate} />
+      <NewsTicker onNavigate={navigate} />
       {activeTab === 'quemsomos' && <PageQuemSomos onNavigate={navigate} />}
       {activeTab === 'secretaria' && <PageSecretaria />}
       {activeTab === 'servicos' && <PageServicos onNavigate={navigate} />}
