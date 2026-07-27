@@ -301,11 +301,16 @@ nav.navbar{
 }
 .ticker-texto{white-space:nowrap}
 .ticker-sep{color:var(--amarelo);margin:0 1.15rem;font-size:.45rem}
-@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){
-  .ticker-track{animation:none}
-  .ticker-viewport{overflow-x:auto}
+/* translate3d força camada própria: no Safari do iPhone a versão 2D às vezes
+   deixa de repintar dentro de contêiner com máscara. */
+@keyframes ticker-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+/* Modo sem movimento: uma manchete por vez, trocando com fade. */
+.ticker-item--fade{padding-left:1.2rem;max-width:100%;animation:ticker-fade .5s ease}
+.ticker-item--fade .ticker-texto{
+  white-space:normal;overflow:hidden;line-height:1.25;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical
 }
+@keyframes ticker-fade{from{opacity:0}to{opacity:1}}
 
 /* ===== NOTÍCIAS (lista) ===== */
 .conv-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
