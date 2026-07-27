@@ -40,7 +40,7 @@ export default function PageNoticias() {
 
           <div className="conv-list reveal">
             {noticias.map((n) => (
-              <div className={`conv-item${n.videos ? ' conv-item--media' : ''}`} key={n.titulo}>
+              <div className={`conv-item${n.videos || n.imagem ? ' conv-item--media' : ''}`} key={n.titulo}>
                 <div className="conv-date">
                   <span className="conv-day">{n.dia}</span>
                   <span className="conv-month">{n.mes} · {n.ano}</span>
@@ -48,9 +48,20 @@ export default function PageNoticias() {
                 <div>
                   <div className="conv-h">{n.titulo}</div>
                   <div className="conv-p">{n.texto}</div>
-                  {n.videos && (
+                  {(n.imagem || n.videos) && (
                     <div className="conv-media">
-                      {n.videos.map((v) => (
+                      {n.imagem && (
+                        <a
+                          className="conv-foto"
+                          href={n.imagem.src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img src={n.imagem.src} alt={n.imagem.alt} loading="lazy" />
+                          <span className="conv-foto-cap">Ver cartaz em tamanho real →</span>
+                        </a>
+                      )}
+                      {n.videos?.map((v) => (
                         <VideoTile v={v} key={v.src} />
                       ))}
                     </div>

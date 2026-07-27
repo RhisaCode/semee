@@ -1,7 +1,16 @@
 export interface NoticiaVideo {
   src: string;
   poster: string;
+  /** Miniatura leve para o ticker; cai no poster quando ausente. */
+  thumb?: string;
   titulo: string;
+}
+
+export interface NoticiaImagem {
+  src: string;
+  alt: string;
+  /** Miniatura leve para o ticker; usa o src quando ausente. */
+  thumb?: string;
 }
 
 export interface Noticia {
@@ -14,6 +23,7 @@ export interface Noticia {
   texto: string;
   meta: string;
   badge: { label: string; cls: string };
+  imagem?: NoticiaImagem;
   videos?: NoticiaVideo[];
   link?: { href: string; label: string };
 }
@@ -29,13 +39,26 @@ export const noticias: Noticia[] = [
   },
   {
     dia: '26', mes: 'JUL', ano: '2026',
+    titulo: 'Festival de Oportunidades: crédito para MEIs e autônomos venderem no XXXI Festival Folclórico Benjaminense',
+    curto: 'Festival de Oportunidades: financiamento para MEIs e autônomos venderem no XXXI Festival Folclórico',
+    texto: 'Quem vai vender no XXXI Festival Folclórico Benjaminense pode chegar ao evento com o estoque reforçado. A Prefeitura de Benjamin Constant, por meio da SEMEE e em parceria com o Sebrae e a AFEAM, está disponibilizando oportunidades de financiamento para MEIs e autônomos que irão comercializar produtos e serviços durante o festival — a maior janela de vendas do calendário cultural do Alto Solimões. O atendimento é presencial na Sala do Empreendedor, na Rua José Ferreira da Rocha Primo, s/n, bairro Coimbra, onde a equipe apresenta as linhas de crédito disponíveis e ajuda a escolher a que cabe no tamanho de cada negócio.',
+    meta: 'SALA DO EMPREENDEDOR · SEBRAE · AFEAM',
+    badge: { label: 'Oportunidade', cls: 'badge-yellow' },
+    imagem: {
+      src: '/noticias/festival-oportunidades.jpg',
+      alt: 'Cartaz do Festival de Oportunidades: financiamentos para MEI e autônomos no XXXI Festival Folclórico Benjaminense, na Sala do Empreendedor',
+      thumb: '/noticias/festival-oportunidades-thumb.jpg',
+    },
+  },
+  {
+    dia: '26', mes: 'JUL', ano: '2026',
     titulo: '1º Feirão de Crédito aproxima quem empreende das instituições financeiras',
     curto: '1º Feirão de Crédito de Benjamin Constant',
     texto: 'Benjamin Constant realizou o seu primeiro Feirão de Crédito, reunindo empreendedores e instituições financeiras em um só lugar para orientar, tirar dúvidas e abrir caminho até as linhas de crédito. De auditório cheio, a ação atacou um dos gargalos mais citados por quem empreende no Alto Solimões: o acesso a financiamento para abrir ou fazer crescer o próprio negócio.',
     meta: 'SEMEE EM AÇÃO · CRÉDITO E FOMENTO',
     badge: { label: 'Ação', cls: 'badge-green' },
     videos: [
-      { src: '/noticias/feirao-credito.mp4', poster: '/noticias/feirao-credito.jpg', titulo: '1º Feirão de Crédito de Benjamin Constant' },
+      { src: '/noticias/feirao-credito.mp4', poster: '/noticias/feirao-credito.jpg', thumb: '/noticias/feirao-credito-thumb.jpg', titulo: '1º Feirão de Crédito de Benjamin Constant' },
     ],
     link: { href: 'https://www.instagram.com/reel/DVyGnetgibL/', label: 'Assista no Instagram →' },
   },
@@ -56,8 +79,8 @@ export const noticias: Noticia[] = [
     meta: 'SEMEE EM AÇÃO · ARTESANATO',
     badge: { label: 'Cultura', cls: 'badge-blue' },
     videos: [
-      { src: '/noticias/tecer-negocios.mp4', poster: '/noticias/tecer-negocios.jpg', titulo: 'Um Encontro Para Tecer Negócios' },
-      { src: '/noticias/cultura-renda.mp4', poster: '/noticias/cultura-renda.jpg', titulo: 'Difundindo a Cultura e Gerando Renda' },
+      { src: '/noticias/tecer-negocios.mp4', poster: '/noticias/tecer-negocios.jpg', thumb: '/noticias/tecer-negocios-thumb.jpg', titulo: 'Um Encontro Para Tecer Negócios' },
+      { src: '/noticias/cultura-renda.mp4', poster: '/noticias/cultura-renda.jpg', thumb: '/noticias/cultura-renda-thumb.jpg', titulo: 'Difundindo a Cultura e Gerando Renda' },
     ],
   },
   {
@@ -68,8 +91,8 @@ export const noticias: Noticia[] = [
     meta: 'SEMEE EM AÇÃO · CAPACITAÇÃO · MEI',
     badge: { label: 'Capacitação', cls: 'badge-green' },
     videos: [
-      { src: '/noticias/feirao-mei.mp4', poster: '/noticias/feirao-mei.jpg', titulo: 'Feirão do MEI — Capacitação' },
-      { src: '/noticias/apoio-negocios.mp4', poster: '/noticias/apoio-negocios.jpg', titulo: 'Apoio para Desenvolver Negócios' },
+      { src: '/noticias/feirao-mei.mp4', poster: '/noticias/feirao-mei.jpg', thumb: '/noticias/feirao-mei-thumb.jpg', titulo: 'Feirão do MEI — Capacitação' },
+      { src: '/noticias/apoio-negocios.mp4', poster: '/noticias/apoio-negocios.jpg', thumb: '/noticias/apoio-negocios-thumb.jpg', titulo: 'Apoio para Desenvolver Negócios' },
     ],
   },
   {
@@ -80,7 +103,7 @@ export const noticias: Noticia[] = [
     meta: 'SEMEE EM AÇÃO · INCLUSÃO PRODUTIVA',
     badge: { label: 'Inclusão', cls: 'badge-blue' },
     videos: [
-      { src: '/noticias/workshop-diversidade.mp4', poster: '/noticias/workshop-diversidade.jpg', titulo: 'I Workshop: Diversidade que Empreende' },
+      { src: '/noticias/workshop-diversidade.mp4', poster: '/noticias/workshop-diversidade.jpg', thumb: '/noticias/workshop-diversidade-thumb.jpg', titulo: 'I Workshop: Diversidade que Empreende' },
     ],
   },
   {
@@ -91,7 +114,7 @@ export const noticias: Noticia[] = [
     meta: 'SEMEE EM AÇÃO · ESPORTE E ECONOMIA',
     badge: { label: 'Economia', cls: 'badge-yellow' },
     videos: [
-      { src: '/noticias/jeas-2026.mp4', poster: '/noticias/jeas-2026.jpg', titulo: 'XXX JEAS 2026' },
+      { src: '/noticias/jeas-2026.mp4', poster: '/noticias/jeas-2026.jpg', thumb: '/noticias/jeas-2026-thumb.jpg', titulo: 'XXX JEAS 2026' },
     ],
   },
   {
@@ -126,5 +149,15 @@ export const noticias: Noticia[] = [
   },
 ];
 
+export interface Manchete {
+  texto: string;
+  /** Miniatura da notícia, quando ela tem imagem ou vídeo. */
+  thumb?: string;
+}
+
 /** Manchetes do ticker: as notícias mais recentes, em versão curta. */
-export const manchetes: string[] = noticias.slice(0, 8).map((n) => n.curto ?? n.titulo);
+export const manchetes: Manchete[] = noticias.slice(0, 8).map((n) => ({
+  texto: n.curto ?? n.titulo,
+  thumb:
+    n.imagem?.thumb ?? n.imagem?.src ?? n.videos?.[0]?.thumb ?? n.videos?.[0]?.poster,
+}));
