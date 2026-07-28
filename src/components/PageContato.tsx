@@ -11,14 +11,14 @@ export default function PageContato() {
             <div className="contato-left reveal">
               <div className="contato-eyebrow">Atendimento ao público</div>
               <h3>Onde nos encontrar</h3>
-              <p>A SEMEE atende presencialmente na Sala do Empreendedor, na sede da Prefeitura Municipal de Benjamin Constant, no horário regular do Poder Executivo Municipal.</p>
+              <p>A SEMEE atende presencialmente na Sala do Empreendedor, na sede da Secretaria, no bairro Coimbra, no horário regular do Poder Executivo Municipal.</p>
 
               <div className="contato-info">
                 <div className="contato-info-item">
                   <div className="contato-info-icon">⌖</div>
                   <div className="contato-info-text">
                     <strong>Endereço</strong>
-                    <span>Rua Frei Ludovico, nº 750 — Centro<br/>Benjamin Constant — AM · CEP 69.630-000</span>
+                    <span>Rua José Ferreira da Rocha Primo, nº 99 — Coimbra<br/>Benjamin Constant — AM · CEP 69.630-000</span>
                   </div>
                 </div>
                 <div className="contato-info-item">
@@ -32,7 +32,7 @@ export default function PageContato() {
                   <div className="contato-info-icon">✆</div>
                   <div className="contato-info-text">
                     <strong>Telefone / WhatsApp</strong>
-                    <span>(97) 98128-9272</span>
+                    <span>(97) 98416-5740</span>
                   </div>
                 </div>
                 <div className="contato-info-item">
@@ -82,7 +82,7 @@ export default function PageContato() {
               {/* TODO: integrar formulário com Formspree, EmailJS ou endpoint próprio antes da divulgação ampla */}
               <button
                 className="form-submit"
-                onClick={(e) => { e.preventDefault(); alert('Formulário em integração. Por enquanto, fale conosco pelo WhatsApp (97) 98128-9272.'); }}
+                onClick={(e) => { e.preventDefault(); alert('Formulário em integração. Por enquanto, fale conosco pelo WhatsApp (97) 98416-5740.'); }}
               >Enviar mensagem →</button>
             </div>
           </div>

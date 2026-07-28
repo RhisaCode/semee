@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { noticias } from '../data/noticias';
 import type { NoticiaVideo } from '../data/noticias';
 
@@ -29,7 +29,18 @@ function VideoTile({ v }: { v: NoticiaVideo }) {
   );
 }
 
-export default function PageNoticias() {
+interface Props {
+  /** Slug vindo do link direto (#/noticia/<id>): rola até a matéria e a destaca. */
+  focusId?: string | null;
+}
+
+export default function PageNoticias({ focusId }: Props) {
+  useEffect(() => {
+    if (!focusId) return;
+    const alvo = document.getElementById(`noticia-${focusId}`);
+    if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [focusId]);
+
   return (
     <div className="page active" id="page-noticias">
       <section className="section">
@@ -40,7 +51,11 @@ export default function PageNoticias() {
 
           <div className="conv-list reveal">
             {noticias.map((n) => (
-              <div className={`conv-item${n.videos || n.imagem ? ' conv-item--media' : ''}`} key={n.titulo}>
+              <div
+                className={`conv-item${n.videos || n.imagem ? ' conv-item--media' : ''}${n.id === focusId ? ' conv-item--focus' : ''}`}
+                id={`noticia-${n.id}`}
+                key={n.id}
+              >
                 <div className="conv-date">
                   <span className="conv-day">{n.dia}</span>
                   <span className="conv-month">{n.mes} · {n.ano}</span>

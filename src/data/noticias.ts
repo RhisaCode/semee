@@ -14,6 +14,8 @@ export interface NoticiaImagem {
 }
 
 export interface Noticia {
+  /** Slug estável usado no link direto (#/noticia/<id>) e nas âncoras da página. */
+  id: string;
   dia: string;
   mes: string;
   ano: string;
@@ -30,6 +32,21 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'mapeamento-microcosmos',
+    dia: '28', mes: 'JUL', ano: '2026',
+    titulo: 'Chamada aberta: Mapeamento do Microcosmos de Inovação de Atalaia do Norte e Benjamin Constant',
+    curto: 'Chamada aberta: Mapeamento do Microcosmos de Inovação — 29/07, 8h, Miniauditório do INC/UFAM',
+    texto: 'Se você faz inovação no Alto Solimões, o mapa começa por você. Benjamin Constant e Atalaia do Norte abrem o Mapeamento do Microcosmos de Inovação — o desenho, feito de dentro, de quem produz inovação no território: startups de base tecnológica e de impacto, empreendedores locais (negócios formais e informais), a Sala do Empreendedor e os órgãos de apoio ao MEI, universidades e pesquisadores (UFAM, UEA, IFAM e institutos) e o setor público. O encontro de abertura acontece nesta quarta-feira, 29 de julho, das 08h às 12h, no Miniauditório do INC/UFAM, em Benjamin Constant, na semana do I Foro de Inovação Microcosmos.',
+    meta: 'CHAMADA ABERTA · ATALAIA DO NORTE + BENJAMIN CONSTANT · SEBRAE',
+    badge: { label: 'Chamada', cls: 'badge-blue' },
+    imagem: {
+      src: '/noticias/mapeamento-microcosmos.jpg',
+      alt: 'Cartaz do Mapeamento do Microcosmos de Inovação de Atalaia do Norte e Benjamin Constant — 29 de julho, 08h às 12h, Miniauditório do INC/UFAM',
+      thumb: '/noticias/mapeamento-microcosmos-thumb.jpg',
+    },
+  },
+  {
+    id: 'foro-microcosmos',
     dia: '30', mes: 'JUL', ano: '2026',
     titulo: 'I Foro de Inovação Microcosmos reúne instituições de todo o país em Benjamin Constant',
     curto: 'I Foro de Inovação Microcosmos: 30 e 31 de julho em Benjamin Constant',
@@ -38,10 +55,11 @@ export const noticias: Noticia[] = [
     badge: { label: 'Agenda', cls: 'badge-blue' },
   },
   {
+    id: 'festival-de-oportunidades',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'Festival de Oportunidades: crédito para MEIs e autônomos venderem no XXXI Festival Folclórico Benjaminense',
     curto: 'Festival de Oportunidades: financiamento para MEIs e autônomos venderem no XXXI Festival Folclórico',
-    texto: 'Quem vai vender no XXXI Festival Folclórico Benjaminense pode chegar ao evento com o estoque reforçado. A Prefeitura de Benjamin Constant, por meio da SEMEE e em parceria com o Sebrae e a AFEAM, está disponibilizando oportunidades de financiamento para MEIs e autônomos que irão comercializar produtos e serviços durante o festival — a maior janela de vendas do calendário cultural do Alto Solimões. O atendimento é presencial na Sala do Empreendedor, na Rua José Ferreira da Rocha Primo, s/n, bairro Coimbra, onde a equipe apresenta as linhas de crédito disponíveis e ajuda a escolher a que cabe no tamanho de cada negócio.',
+    texto: 'Quem vai vender no XXXI Festival Folclórico Benjaminense pode chegar ao evento com o estoque reforçado. A Prefeitura de Benjamin Constant, por meio da SEMEE e em parceria com o Sebrae e a AFEAM, está disponibilizando oportunidades de financiamento para MEIs e autônomos que irão comercializar produtos e serviços durante o festival — a maior janela de vendas do calendário cultural do Alto Solimões. O atendimento é presencial na Sala do Empreendedor, na Rua José Ferreira da Rocha Primo, nº 99, bairro Coimbra, onde a equipe apresenta as linhas de crédito disponíveis e ajuda a escolher a que cabe no tamanho de cada negócio.',
     meta: 'SALA DO EMPREENDEDOR · SEBRAE · AFEAM',
     badge: { label: 'Oportunidade', cls: 'badge-yellow' },
     imagem: {
@@ -51,6 +69,7 @@ export const noticias: Noticia[] = [
     },
   },
   {
+    id: 'feirao-de-credito',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: '1º Feirão de Crédito aproxima quem empreende das instituições financeiras',
     curto: '1º Feirão de Crédito de Benjamin Constant',
@@ -63,6 +82,7 @@ export const noticias: Noticia[] = [
     link: { href: 'https://www.instagram.com/reel/DVyGnetgibL/', label: 'Assista no Instagram →' },
   },
   {
+    id: 'ig-artesanato-ticuna',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'Artesanato Ticuna de Benjamin Constant caminha para ser a primeira Indicação Geográfica indígena do Amazonas',
     curto: 'Artesanato Ticuna rumo à 1ª Indicação Geográfica indígena do Amazonas',
@@ -72,6 +92,7 @@ export const noticias: Noticia[] = [
     link: { href: 'https://am.agenciasebrae.com.br/cultura-empreendedora/sebrae-apoia-processo-da-indicacao-geografica-do-artesanato-ticuna-de-benjamin-constant/', label: 'Leia na Agência Sebrae de Notícias →' },
   },
   {
+    id: 'polo-artesanato',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'Um encontro para tecer negócios: polo regional de artesanato une cultura e renda',
     curto: 'Polo regional de artesanato: difundindo a cultura e gerando renda',
@@ -84,6 +105,7 @@ export const noticias: Noticia[] = [
     ],
   },
   {
+    id: 'feirao-do-mei',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'Feirão do MEI leva capacitação e apoio a quem quer desenvolver o próprio negócio',
     curto: 'Feirão do MEI: capacitação para pequenos empreendedores',
@@ -96,6 +118,7 @@ export const noticias: Noticia[] = [
     ],
   },
   {
+    id: 'workshop-diversidade',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'I Workshop "Diversidade que Empreende" promove inclusão e autonomia',
     curto: 'I Workshop Diversidade que Empreende: empreendedorismo para todos',
@@ -107,6 +130,7 @@ export const noticias: Noticia[] = [
     ],
   },
   {
+    id: 'jeas-2026',
     dia: '26', mes: 'JUL', ano: '2026',
     titulo: 'XXX JEAS 2026: quando o esporte entra em campo, a economia também vence',
     curto: 'XXX JEAS 2026: esporte movimentando a economia local',
@@ -118,6 +142,7 @@ export const noticias: Noticia[] = [
     ],
   },
   {
+    id: 'premio-sebrae-2026',
     dia: '18', mes: 'MAI', ano: '2026',
     titulo: 'Benjamin Constant é vice-campeã nacional do Prêmio Sebrae Prefeitura Empreendedora',
     curto: 'Benjamin Constant: vice-campeã nacional do Prêmio Sebrae Prefeitura Empreendedora',
@@ -127,6 +152,7 @@ export const noticias: Noticia[] = [
     link: { href: 'https://agenciasebrae.com.br/economia-e-politica/conheca-os-municipios-reconhecidos-por-apoiar-o-empreendedorismo-brasileiro/', label: 'Veja a lista dos municípios premiados →' },
   },
   {
+    id: 'capital-semente',
     dia: '03', mes: 'OUT', ano: '2025',
     titulo: 'Capital Semente: R$ 66 mil investidos e 11 startups selecionadas em edital histórico',
     texto: 'Benjamin Constant tornou-se um dos primeiros municípios do interior do Amazonas a investir recursos próprios em startups locais. O edital Capital Semente selecionou 11 negócios inovadores, que receberam aporte e acompanhamento para desenvolver suas soluções.',
@@ -134,6 +160,7 @@ export const noticias: Noticia[] = [
     badge: { label: 'Edital', cls: 'badge-green' },
   },
   {
+    id: 'lei-1433-2025',
     dia: '29', mes: 'SET', ano: '2025',
     titulo: 'Lei nº 1.433/2025 cria a Secretaria Municipal de Empreendedorismo e Emprego',
     texto: 'Sancionada pelo prefeito Semeide Bermeguy Porto, a Lei Municipal nº 1.433, de 26 de setembro de 2025, desmembrou a antiga SEMET e criou a SEMEE, com a missão de planejar e executar as políticas de empreendedorismo, emprego e apoio aos micro e pequenos negócios do município.',
@@ -141,6 +168,7 @@ export const noticias: Noticia[] = [
     badge: { label: 'Lei', cls: 'badge-green' },
   },
   {
+    id: 'cidade-empreendedora-2025',
     dia: '12', mes: 'MAR', ano: '2025',
     titulo: 'Município renova com o Sebrae e adere ao ciclo 2025 do Cidade Empreendedora',
     texto: 'Ao longo de 16 meses, o programa Cidade Empreendedora executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas em Benjamin Constant — da desburocratização às compras públicas de pequenos negócios. O município renovou a parceria para o novo ciclo.',

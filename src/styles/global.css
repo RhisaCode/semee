@@ -312,13 +312,74 @@ nav.navbar{
 }
 @keyframes ticker-fade{from{opacity:0}to{opacity:1}}
 
+/* ===== BANNER DE DESTAQUE (abaixo da faixa; rola junto com a página) ===== */
+.news-hero{
+  background:linear-gradient(135deg,var(--navy2) 0%,var(--navy) 55%,#1b62a5 100%);
+  border-bottom:4px solid var(--amarelo);overflow:hidden
+}
+.news-hero-inner{
+  max-width:var(--max);margin:0 auto;padding:1.6rem 1.5rem;
+  display:grid;grid-template-columns:300px 1fr;gap:2.2rem;align-items:center;
+  animation:heroSwap .45s ease
+}
+@keyframes heroSwap{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.news-hero-inner{animation:none}}
+.news-hero-media{
+  background:none;border:0;padding:0;cursor:pointer;
+  height:250px;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;
+  background-color:rgba(255,255,255,.06)
+}
+.news-hero-media img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .35s ease}
+.news-hero-media:hover img{transform:scale(1.04)}
+.news-hero-media-fallback{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.news-hero-media-fallback img{width:110px;height:auto;opacity:.85}
+.news-hero-eyebrow{
+  display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+  font-size:.66rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amarelo);margin-bottom:.7rem
+}
+.news-hero-data{color:rgba(255,255,255,.65);letter-spacing:.1em}
+.news-hero-titulo{margin:0 0 .6rem}
+.news-hero-titulo button{
+  background:none;border:0;padding:0;cursor:pointer;text-align:left;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:1.55rem;font-weight:800;
+  color:#fff;line-height:1.2;letter-spacing:-0.01em;transition:color .18s
+}
+.news-hero-titulo button:hover{color:var(--amarelo)}
+.news-hero-resumo{
+  color:rgba(255,255,255,.78);font-size:.9rem;line-height:1.6;max-width:640px;
+  margin-bottom:1.2rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden
+}
+.news-hero-acoes{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.news-hero-cta{
+  background:var(--amarelo);color:var(--navy);border:0;cursor:pointer;
+  padding:.7rem 1.4rem;border-radius:22px;font-size:.8rem;font-weight:800;
+  letter-spacing:.03em;transition:transform .18s,box-shadow .18s
+}
+.news-hero-cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(254,219,52,.35)}
+.news-hero-dots{display:flex;gap:.45rem}
+.news-hero-dot{
+  width:9px;height:9px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  background:rgba(255,255,255,.35);transition:background .18s,transform .18s
+}
+.news-hero-dot:hover{background:rgba(255,255,255,.7)}
+.news-hero-dot.ativa{background:var(--amarelo);transform:scale(1.25)}
+
 /* ===== NOTÍCIAS (lista) ===== */
 .conv-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden}
 .conv-item{
   display:grid;grid-template-columns:80px 1fr auto;gap:1.5rem;align-items:center;
-  background:var(--white);padding:1.5rem 1.8rem;transition:background .18s
+  background:var(--white);padding:1.5rem 1.8rem;transition:background .18s;
+  scroll-margin-top:calc(var(--nav-h) + var(--ticker-h) + 16px)
 }
 .conv-item:hover{background:var(--bg2)}
+/* matéria aberta por link direto (#/noticia/<id>) */
+.conv-item--focus{
+  background:#FFFBEA;border-left:4px solid var(--amarelo);padding-left:calc(1.8rem - 4px);
+  animation:focusPulse 1.6s ease 1
+}
+@keyframes focusPulse{0%{background:#FFF3C4}100%{background:#FFFBEA}}
 .conv-date{display:flex;flex-direction:column}
 .conv-day{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:800;color:var(--t1);line-height:1}
 .conv-month{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g2)}
@@ -441,6 +502,10 @@ footer ul{list-style:none}
   .nav-brand-sub{display:none}
 }
 @media (max-width:900px){
+  .news-hero-inner{grid-template-columns:1fr;gap:1.2rem;padding:1.2rem 1rem 1.4rem}
+  .news-hero-media{height:190px}
+  .news-hero-titulo button{font-size:1.15rem}
+  .news-hero-resumo{-webkit-line-clamp:2;font-size:.84rem}
   .hero-inner{grid-template-columns:1fr;padding:3rem 1.5rem 2.5rem;gap:2.5rem}
   .hero h1{font-size:2.1rem}
   .eixos-grid{grid-template-columns:1fr 1fr}
