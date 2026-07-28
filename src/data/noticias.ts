@@ -32,6 +32,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'reuniao-staff-foro-microcosmos',
+    dia: '28', mes: 'JUL', ano: '2026',
+    titulo: 'Prefeito Semeide Bermeguy reúne todo o secretariado para alinhar o I Foro de Inovação Microcosmos',
+    curto: 'Prefeito reúne o secretariado para alinhar o I Foro de Inovação Microcosmos (30 e 31/07)',
+    texto: 'No dia 28 de julho, o prefeito Semeide Bermeguy reuniu no gabinete todo o staff da Prefeitura de Benjamin Constant — com cada secretário representando a sua pasta — para o alinhamento final do I Foro de Inovação Microcosmos, que acontece nos dias 30 e 31 de julho, na UFAM (INC). O secretário de Ciência, Tecnologia e Inovação conduziu a reunião apresentando os pontos principais e a programação completa do evento. O prefeito reforçou a importância do Foro para o município e para toda a região do Alto Solimões, e pediu a participação em massa de todas as secretarias — cada uma presente e representando a sua respectiva pasta.',
+    meta: 'GABINETE DO PREFEITO · I FORO MICROCOSMOS · 30 E 31/07',
+    badge: { label: 'Governo', cls: 'badge-blue' },
+    imagem: {
+      src: '/noticias/reuniao-staff-foro.jpg',
+      alt: 'Card da reunião do I Foro de Microcosmos de Inovação: prefeito Semeide Bermeguy e secretariado reunidos no gabinete da Prefeitura de Benjamin Constant',
+      thumb: '/noticias/reuniao-staff-foro-thumb.jpg',
+    },
+  },
+  {
     id: 'mapeamento-microcosmos',
     dia: '28', mes: 'JUL', ano: '2026',
     titulo: 'Chamada aberta: Mapeamento do Microcosmos de Inovação de Atalaia do Norte e Benjamin Constant',
