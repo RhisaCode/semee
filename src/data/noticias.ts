@@ -32,6 +32,16 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'cidade-empreendedora-2027-2028',
+    dia: '06', mes: 'AGO', ano: '2026',
+    titulo: 'Prefeito assina a adesão de Benjamin Constant ao Cidade Empreendedora 2027/2028',
+    curto: 'Benjamin Constant adere ao Cidade Empreendedora 2027/2028',
+    texto: 'Na manhã do dia 6 de agosto, o prefeito Semeide Bermeguy assinou o Termo de Adesão ao Cidade Empreendedora, o programa do Sebrae que trabalha dentro da administração municipal para melhorar a gestão pública, facilitar a vida de quem tem empresa e abrir oportunidades de renda. A assinatura veio poucos dias depois de o Sebrae Amazonas abrir o edital do novo ciclo, em 4 de agosto — e coloca Benjamin Constant entre os primeiros municípios do estado a garantir vaga no 2027/2028. "Mais do que um documento, esse passo representa um compromisso firme com o desenvolvimento econômico do nosso município", escreveu o prefeito ao anunciar a adesão, citando o fortalecimento do ambiente de negócios, a simplificação de processos, a capacitação de empreendedores e a geração de emprego e renda. O novo ciclo é executado em um plano de trabalho de 18 a 24 meses, desenhado sob medida para o município, com investimento compartilhado — metade subsidiada pelo Sebrae, metade como contrapartida da Prefeitura. A metodologia está organizada em dez eixos: Gestão e Políticas Públicas, Liderança e Governança Local, Simplificação, Sala do Empreendedor, Compras Públicas e Acesso a Crédito, Empreendedorismo na Escola, Inclusão Socioprodutiva, Identidade, Vocações e Mercado, Inovação, e Resiliência Climática e Sustentabilidade. A adesão dá sequência a um trabalho que já tem resultado em casa: no ciclo anterior, o programa executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas no município, percurso que levou Benjamin Constant ao Prêmio Sebrae Prefeitura Empreendedora, em nível nacional, no eixo Gestão Inovadora. Para a SEMEE, é a base sobre a qual seguem a Sala do Empreendedor, o SIME e a plataforma ContrataBC.',
+    meta: 'GABINETE DO PREFEITO · SEBRAE/AM · CICLO 2027/2028',
+    badge: { label: 'Programa', cls: 'badge-green' },
+    link: { href: 'https://www.instagram.com/reel/DbtT8DMxQdi/', label: 'Assista no Instagram →' },
+  },
+  {
     id: 'encontro-agentes-alto-solimoes',
     dia: '05', mes: 'AGO', ano: '2026',
     titulo: 'Benjamin Constant sedia o Encontro Regional dos Agentes de Desenvolvimento das Salas do Empreendedor do Alto Solimões',
