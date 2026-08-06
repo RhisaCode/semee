@@ -340,6 +340,11 @@ nav.navbar{
   color:var(--amarelo);margin-bottom:.7rem
 }
 .news-hero-data{color:rgba(255,255,255,.65);letter-spacing:.1em}
+/* Os badges nascem para fundo branco; sobre o azul do hero precisam de base sólida. */
+.news-hero-eyebrow .badge{background:rgba(255,255,255,.92)}
+.news-hero-eyebrow .badge-green{color:#0F6B2A}
+.news-hero-eyebrow .badge-yellow{color:#8A5A08}
+.news-hero-eyebrow .badge-blue{color:#1D4ED8}
 .news-hero-titulo{margin:0 0 .6rem}
 .news-hero-titulo button{
   background:none;border:0;padding:0;cursor:pointer;text-align:left;

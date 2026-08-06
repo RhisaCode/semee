@@ -32,6 +32,37 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'encontro-agentes-alto-solimoes',
+    dia: '05', mes: 'AGO', ano: '2026',
+    titulo: 'Benjamin Constant sedia o Encontro Regional dos Agentes de Desenvolvimento das Salas do Empreendedor do Alto Solimões',
+    curto: 'Benjamin Constant sedia o Encontro Regional dos Agentes de Desenvolvimento do Alto Solimões',
+    texto: 'Benjamin Constant recebeu, nesta quarta-feira (5), o Encontro Regional dos Agentes de Desenvolvimento das Salas do Empreendedor do Polo Alto Solimões. Sentaram na mesma sala as equipes de Tabatinga, Atalaia do Norte, São Paulo de Olivença, Santo Antônio do Içá, Amaturá e do próprio município — todas nascidas da parceria entre o Sebrae e as prefeituras, que mantêm em cada cidade um espaço dedicado a orientar quem empreende. A capacitação é bem prática: como emitir e ler certidões, manter o MEI regular, resolver o que trava o atendimento no balcão. A lógica é direta — quanto melhor preparado o agente de desenvolvimento, melhor o atendimento que chega ao microempreendedor. Sediar o encontro em 2026 também diz algo sobre o município: Benjamin Constant vem sendo reconhecido pelo trabalho com os pequenos negócios, com o 2º lugar nacional no eixo Gestão Inovadora do Prêmio Sebrae Prefeitura Empreendedora. Para além da agenda, encontros como este aproximam os municípios, fazem circular o que deu certo em cada um e ajudam a construir soluções para o desenvolvimento de toda a região do Alto Solimões.',
+    meta: 'SALA DO EMPREENDEDOR · POLO ALTO SOLIMÕES · SEBRAE',
+    badge: { label: 'Capacitação', cls: 'badge-green' },
+    videos: [
+      {
+        src: '/noticias/encontro-agentes-alto-solimoes.mp4',
+        poster: '/noticias/encontro-agentes-alto-solimoes.jpg',
+        thumb: '/noticias/encontro-agentes-alto-solimoes-thumb.jpg',
+        titulo: 'Encontro Regional dos Agentes de Desenvolvimento — Polo Alto Solimões',
+      },
+    ],
+  },
+  {
+    id: 'semee-no-foro-microcosmos',
+    dia: '30', mes: 'JUL', ano: '2026',
+    titulo: 'SEMEE marca presença no I Foro de Microcosmos de Inovação',
+    curto: 'SEMEE marca presença no I Foro de Microcosmos de Inovação',
+    texto: 'A equipe da Secretaria Municipal de Empreendedorismo e Emprego participou do I Foro de Microcosmos de Inovação, realizado em Benjamin Constant nos dias 30 e 31 de julho, no INC/UFAM. O Foro reuniu instituições de dentro e de fora do Amazonas para discutir como se faz inovação no interior da Amazônia — e a SEMEE esteve lá com a equipe da Sala do Empreendedor, acompanhando as mesas e apresentando as políticas municipais de empreendedorismo e emprego. Fortalecer conexões, promover ideias e impulsionar o desenvolvimento por meio da inovação e do empreendedorismo é exatamente o caminho que o município vem trilhando desde o Capital Semente. Juntos, construímos oportunidades e transformamos realidades.',
+    meta: 'SEMEE EM AÇÃO · I FORO DE MICROCOSMOS · INC/UFAM',
+    badge: { label: 'Ação', cls: 'badge-green' },
+    imagem: {
+      src: '/noticias/semee-foro-microcosmos.jpg',
+      alt: 'Card de participação da SEMEE no 1º Foro de Microcosmos de Inovação, com a equipe da Secretaria e da Sala do Empreendedor reunida no evento',
+      thumb: '/noticias/semee-foro-microcosmos-thumb.jpg',
+    },
+  },
+  {
     id: 'reuniao-staff-foro-microcosmos',
     dia: '28', mes: 'JUL', ano: '2026',
     titulo: 'Prefeito Semeide Bermeguy reúne todo o secretariado para alinhar o I Foro de Inovação Microcosmos',
@@ -64,9 +95,9 @@ export const noticias: Noticia[] = [
     dia: '30', mes: 'JUL', ano: '2026',
     titulo: 'I Foro de Inovação Microcosmos reúne instituições de todo o país em Benjamin Constant',
     curto: 'I Foro de Inovação Microcosmos: 30 e 31 de julho em Benjamin Constant',
-    texto: 'Nos dias 30 e 31 de julho, Benjamin Constant recebe o I Foro de Inovação Microcosmos, com 26 instituições convidadas para discutir inovação, empreendedorismo e desenvolvimento no interior da Amazônia. A SEMEE participa apresentando as políticas municipais de empreendedorismo e emprego.',
-    meta: 'AGENDA · BENJAMIN CONSTANT/AM',
-    badge: { label: 'Agenda', cls: 'badge-blue' },
+    texto: 'Nos dias 30 e 31 de julho, Benjamin Constant recebeu o I Foro de Inovação Microcosmos, com 26 instituições convidadas para discutir inovação, empreendedorismo e desenvolvimento no interior da Amazônia. A SEMEE participou apresentando as políticas municipais de empreendedorismo e emprego.',
+    meta: 'EVENTO · BENJAMIN CONSTANT/AM',
+    badge: { label: 'Evento', cls: 'badge-blue' },
   },
   {
     id: 'festival-de-oportunidades',
