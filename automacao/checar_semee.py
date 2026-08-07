@@ -23,6 +23,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -72,17 +73,34 @@ def gravar_estado(d: dict) -> None:
     ESTADO.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding='utf-8')
 
 
+# Espera entre tentativas de ssh. A execução das 08:07 de 07/08/2026 morreu com
+# "Connection timed out" no IP do Tailscale enquanto o VPS estava de pé há semanas:
+# quem não estava pronto era a rede desta máquina, recém-acordada. Sem retentativa,
+# um blip de segundos custa 8 horas de atraso até o próximo horário.
+ESPERAS_SSH = (0, 20, 60)
+
+
 def ssh(comando: str, timeout: int = 120) -> str:
-    # `-n` e stdin=DEVNULL são obrigatórios: rodando pelo Agendador de Tarefas não
-    # existe stdin válido, e o ssh fica pendurado esperando entrada até o timeout.
-    r = subprocess.run(
-        ['ssh', '-n', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=20', 'vps', comando],
-        capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=timeout,
-        stdin=subprocess.DEVNULL,
-    )
-    if r.returncode != 0:
-        raise RuntimeError(f'ssh falhou ({r.returncode}): {(r.stderr or "").strip()[:300]}')
-    return r.stdout
+    ultimo = ''
+    for tentativa, espera in enumerate(ESPERAS_SSH, start=1):
+        if espera:
+            log(f'ssh indisponível — nova tentativa em {espera}s ({tentativa}/{len(ESPERAS_SSH)})')
+            time.sleep(espera)
+        try:
+            # `-n` e stdin=DEVNULL são obrigatórios: rodando pelo Agendador de Tarefas
+            # não existe stdin válido, e o ssh fica pendurado esperando entrada.
+            r = subprocess.run(
+                ['ssh', '-n', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=20', 'vps', comando],
+                capture_output=True, text=True, encoding='utf-8', errors='replace',
+                timeout=timeout, stdin=subprocess.DEVNULL,
+            )
+        except subprocess.TimeoutExpired:
+            ultimo = f'ssh estourou {timeout}s'
+            continue
+        if r.returncode == 0:
+            return r.stdout
+        ultimo = f'ssh falhou ({r.returncode}): {(r.stderr or "").strip()[:300]}'
+    raise RuntimeError(f'{ultimo} — depois de {len(ESPERAS_SSH)} tentativas')
 
 
 def mensagens_novas(desde: str) -> list:
