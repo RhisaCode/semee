@@ -13,6 +13,11 @@ export interface NoticiaImagem {
   thumb?: string;
 }
 
+export interface NoticiaLink {
+  href: string;
+  label: string;
+}
+
 export interface Noticia {
   /** Slug estável usado no link direto (#/noticia/<id>) e nas âncoras da página. */
   id: string;
@@ -27,19 +32,37 @@ export interface Noticia {
   badge: { label: string; cls: string };
   imagem?: NoticiaImagem;
   videos?: NoticiaVideo[];
-  link?: { href: string; label: string };
+  /** Fontes da matéria (post oficial, matéria de agência). Renderizadas em linha. */
+  links?: NoticiaLink[];
 }
 
 export const noticias: Noticia[] = [
+  {
+    id: 'comunidades-ribeirinhas-nova-alianca',
+    dia: '10', mes: 'AGO', ano: '2026',
+    titulo: 'SEMEE leva capacitação em empreendedorismo à comunidade ribeirinha de Nova Aliança',
+    curto: 'Empreendedorismo chega à comunidade ribeirinha de Nova Aliança',
+    texto: 'A equipe da Secretaria Municipal de Empreendedorismo e Emprego pegou o barco e foi até a comunidade ribeirinha de Nova Aliança levar capacitação, treinamento e orientação sobre empreendedorismo aos moradores. A ideia da visita é compartilhar conhecimento, incentivar novas ideias e fortalecer as iniciativas que já existem na comunidade, com um objetivo bem prático: ajudar a gerar renda no lugar onde as pessoas vivem. Sair da sede e atender na própria comunidade é uma escolha que diz muito sobre como a Secretaria entende o seu trabalho — quem está mais longe do balcão costuma ser justamente quem tem menos acesso à orientação que faz um pequeno negócio andar. A ação se apoia no Cidade Empreendedora, a parceria com o Sebrae que o município acabou de renovar para o ciclo 2027/2028, e conversa com o que a SEMEE mantém na sede: a Sala do Empreendedor, o SIME e a plataforma ContrataBC. "Nosso compromisso é levar oportunidades, capacitação e apoio para quem move nossa cidade", resume o material da Secretaria sobre a ida às comunidades ribeirinhas.',
+    meta: 'SEMEE EM AÇÃO · COMUNIDADE NOVA ALIANÇA · CIDADE EMPREENDEDORA',
+    badge: { label: 'Inclusão', cls: 'badge-green' },
+    imagem: {
+      src: '/noticias/comunidades-ribeirinhas.jpg',
+      alt: 'Card "Rumo às comunidades ribeirinhas": equipe da SEMEE e moradores reunidos em um barco no rio, com os pilares capacitação e orientação, inovação e soluções, parcerias que geram resultados e desenvolvimento sustentável',
+      thumb: '/noticias/comunidades-ribeirinhas-thumb.jpg',
+    },
+  },
   {
     id: 'cidade-empreendedora-2027-2028',
     dia: '06', mes: 'AGO', ano: '2026',
     titulo: 'Prefeito assina a adesão de Benjamin Constant ao Cidade Empreendedora 2027/2028',
     curto: 'Benjamin Constant adere ao Cidade Empreendedora 2027/2028',
-    texto: 'Na manhã do dia 6 de agosto, o prefeito Semeide Bermeguy assinou o Termo de Adesão ao Cidade Empreendedora, o programa do Sebrae que trabalha dentro da administração municipal para melhorar a gestão pública, facilitar a vida de quem tem empresa e abrir oportunidades de renda. A assinatura veio poucos dias depois de o Sebrae Amazonas abrir o edital do novo ciclo, em 4 de agosto — e coloca Benjamin Constant entre os primeiros municípios do estado a garantir vaga no 2027/2028. "Mais do que um documento, esse passo representa um compromisso firme com o desenvolvimento econômico do nosso município", escreveu o prefeito ao anunciar a adesão, citando o fortalecimento do ambiente de negócios, a simplificação de processos, a capacitação de empreendedores e a geração de emprego e renda. O novo ciclo é executado em um plano de trabalho de 18 a 24 meses, desenhado sob medida para o município, com investimento compartilhado — metade subsidiada pelo Sebrae, metade como contrapartida da Prefeitura. A metodologia está organizada em dez eixos: Gestão e Políticas Públicas, Liderança e Governança Local, Simplificação, Sala do Empreendedor, Compras Públicas e Acesso a Crédito, Empreendedorismo na Escola, Inclusão Socioprodutiva, Identidade, Vocações e Mercado, Inovação, e Resiliência Climática e Sustentabilidade. A adesão dá sequência a um trabalho que já tem resultado em casa: no ciclo anterior, o programa executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas no município, percurso que levou Benjamin Constant ao Prêmio Sebrae Prefeitura Empreendedora, em nível nacional, no eixo Gestão Inovadora. Para a SEMEE, é a base sobre a qual seguem a Sala do Empreendedor, o SIME e a plataforma ContrataBC.',
+    texto: 'Na manhã do dia 6 de agosto, o prefeito Semeide Bermeguy assinou o Termo de Adesão ao Cidade Empreendedora, o programa do Sebrae que trabalha dentro da administração municipal para melhorar a gestão pública, facilitar a vida de quem tem empresa e abrir oportunidades de renda. A assinatura veio poucos dias depois de o Sebrae Amazonas abrir o edital do novo ciclo, em 4 de agosto: Benjamin Constant é o segundo município do estado a aderir ao 2027/2028, e as inscrições seguem abertas até 18 de setembro. "Mais do que um documento, esse passo representa um compromisso firme com o desenvolvimento econômico do nosso município", escreveu o prefeito ao anunciar a adesão, citando o fortalecimento do ambiente de negócios, a simplificação de processos, a capacitação de empreendedores e a geração de emprego e renda. O novo ciclo é executado em um plano de trabalho de 18 a 24 meses, desenhado sob medida para o município, com investimento compartilhado — metade subsidiada pelo Sebrae, metade como contrapartida da Prefeitura. A metodologia está organizada em dez eixos: Gestão e Políticas Públicas, Lideranças Locais e Governança, Simplificação, Sala do Empreendedor, Compras Públicas e Acesso a Crédito, Empreendedorismo na Escola, Inclusão Socioprodutiva, Identidade, Vocações e Mercado, Inovação, e Resiliência Climática e Sustentabilidade. A adesão dá sequência a um trabalho que já tem resultado em casa: no ciclo anterior, o programa executou 122 ações em 7 eixos e alcançou mais de 2.400 pessoas no município, percurso que levou Benjamin Constant ao Prêmio Sebrae Prefeitura Empreendedora, em nível nacional, no eixo Gestão Inovadora. "Com a assinatura do Termo de Adesão para 2027-2028, daremos sequência ao ciclo de crescimento do empreendedorismo em Benjamin Constant. O Cidade Empreendedora trará novas soluções e oportunidades concretas para o desenvolvimento dos pequenos negócios no município", afirmou o secretário de Empreendedorismo e Emprego, Fred Deivyd Monteiro Cabral. Para a SEMEE, é a base sobre a qual seguem a Sala do Empreendedor, o SIME e a plataforma ContrataBC.',
     meta: 'GABINETE DO PREFEITO · SEBRAE/AM · CICLO 2027/2028',
     badge: { label: 'Programa', cls: 'badge-green' },
-    link: { href: 'https://www.instagram.com/reel/DbtT8DMxQdi/', label: 'Assista no Instagram →' },
+    links: [
+      { href: 'https://am.agenciasebrae.com.br/cultura-empreendedora/benjamin-constant-adere-ao-cidade-empreendedora-2027-2028-e-renova-parceria-com-sebrae/', label: 'Leia na Agência Sebrae de Notícias →' },
+      { href: 'https://www.instagram.com/reel/DbtT8DMxQdi/', label: 'Assista no Instagram →' },
+    ],
   },
   {
     id: 'encontro-agentes-alto-solimoes',
@@ -134,7 +157,9 @@ export const noticias: Noticia[] = [
     videos: [
       { src: '/noticias/feirao-credito.mp4', poster: '/noticias/feirao-credito.jpg', thumb: '/noticias/feirao-credito-thumb.jpg', titulo: '1º Feirão de Crédito de Benjamin Constant' },
     ],
-    link: { href: 'https://www.instagram.com/reel/DVyGnetgibL/', label: 'Assista no Instagram →' },
+    links: [
+      { href: 'https://www.instagram.com/reel/DVyGnetgibL/', label: 'Assista no Instagram →' },
+    ],
   },
   {
     id: 'ig-artesanato-ticuna',
@@ -144,7 +169,9 @@ export const noticias: Noticia[] = [
     texto: 'O Artesanato Ticuna deu um passo decisivo rumo ao reconhecimento oficial: já foi assinada a documentação que compõe o Instrumento Oficial da Indicação Geográfica (IG), etapa necessária para protocolar o registro no INPI. Com apoio do Sebrae, será a primeira IG voltada ao artesanato indígena no Amazonas — um selo que valoriza a origem, protege o saber tradicional e agrega valor ao trabalho das artesãs e dos artesãos do território.',
     meta: 'CULTURA EMPREENDEDORA · SEBRAE/AM · INPI',
     badge: { label: 'Reconhecimento', cls: 'badge-yellow' },
-    link: { href: 'https://am.agenciasebrae.com.br/cultura-empreendedora/sebrae-apoia-processo-da-indicacao-geografica-do-artesanato-ticuna-de-benjamin-constant/', label: 'Leia na Agência Sebrae de Notícias →' },
+    links: [
+      { href: 'https://am.agenciasebrae.com.br/cultura-empreendedora/sebrae-apoia-processo-da-indicacao-geografica-do-artesanato-ticuna-de-benjamin-constant/', label: 'Leia na Agência Sebrae de Notícias →' },
+    ],
   },
   {
     id: 'polo-artesanato',
@@ -204,7 +231,9 @@ export const noticias: Noticia[] = [
     texto: 'O projeto "Benjamin Constant Inovadora: Capital Semente e Feiras Indígenas" venceu a etapa estadual do Amazonas, liderou a Região Norte e conquistou o 2º lugar do Brasil na categoria Gestão Inovadora do XIII Prêmio Sebrae Prefeitura Empreendedora, entre mais de 5,5 mil municípios. A entrega aconteceu em cerimônia nacional em Brasília.',
     meta: 'RECONHECIMENTO · XIII PSPE · BRASÍLIA/DF',
     badge: { label: 'Prêmio', cls: 'badge-yellow' },
-    link: { href: 'https://agenciasebrae.com.br/economia-e-politica/conheca-os-municipios-reconhecidos-por-apoiar-o-empreendedorismo-brasileiro/', label: 'Veja a lista dos municípios premiados →' },
+    links: [
+      { href: 'https://agenciasebrae.com.br/economia-e-politica/conheca-os-municipios-reconhecidos-por-apoiar-o-empreendedorismo-brasileiro/', label: 'Veja a lista dos municípios premiados →' },
+    ],
   },
   {
     id: 'capital-semente',

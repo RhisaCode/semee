@@ -57,7 +57,10 @@ Editar `src/data/noticias.ts` inserindo o item **no topo** do array `noticias`
   meta: 'ORIGEM · EIXO · DATA',
   badge: { label: 'Programa', cls: 'badge-green' },
   imagem: { src: '/noticias/x.jpg', alt: '…', thumb: '/noticias/x-thumb.jpg' },
-  link: { href: 'https://…', label: 'Assista no Instagram →' },
+  links: [                               // fontes; pode ter mais de uma
+    { href: 'https://am.agenciasebrae.com.br/…', label: 'Leia na Agência Sebrae de Notícias →' },
+    { href: 'https://www.instagram.com/reel/…', label: 'Assista no Instagram →' },
+  ],
 }
 ```
 
@@ -73,6 +76,12 @@ Regras de texto (estilo do Pedro):
 - ligue a notícia ao que o município já vinha fazendo (Cidade Empreendedora,
   Sala do Empreendedor, SIME, ContrataBC, Capital Semente, Prêmio Sebrae);
 - não afirme primazia ("primeiro município a…") sem checar.
+
+Se o material novo tratar de um fato **já publicado** (é comum o Fred mandar depois a
+matéria de agência sobre algo que já subiu), **não crie um segundo item**: enriqueça o
+que existe com o que a fonte nova traz de fato novo (falas literais, números, prazos) e
+acrescente a fonte em `links`. Item duplicado no topo do array empurra notícia real
+para fora do banner e da faixa.
 
 ## 4. Build, deploy e push
 

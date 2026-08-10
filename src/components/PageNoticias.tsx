@@ -38,7 +38,16 @@ export default function PageNoticias({ focusId }: Props) {
   useEffect(() => {
     if (!focusId) return;
     const alvo = document.getElementById(`noticia-${focusId}`);
-    if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!alvo) return;
+    alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // O que carrega depois (cartazes, pôsteres de vídeo, a faixa de últimas
+    // notícias) muda a altura da página no meio da rolagem suave e a matéria
+    // acaba parando por baixo do topo fixo. Uma correção depois que assenta
+    // garante que quem chega pelo link direto veja o título, não o meio do texto.
+    const corrigir = setTimeout(() => {
+      alvo.scrollIntoView({ behavior: 'auto', block: 'start' });
+    }, 700);
+    return () => clearTimeout(corrigir);
   }, [focusId]);
 
   return (
@@ -81,10 +90,14 @@ export default function PageNoticias({ focusId }: Props) {
                       ))}
                     </div>
                   )}
-                  {n.link && (
-                    <a className="conv-link" href={n.link.href} target="_blank" rel="noopener noreferrer">
-                      {n.link.label}
-                    </a>
+                  {n.links && n.links.length > 0 && (
+                    <div className="conv-links">
+                      {n.links.map((l) => (
+                        <a className="conv-link" href={l.href} target="_blank" rel="noopener noreferrer" key={l.href}>
+                          {l.label}
+                        </a>
+                      ))}
+                    </div>
                   )}
                   <div className="conv-meta">{n.meta}</div>
                 </div>

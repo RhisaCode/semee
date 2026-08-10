@@ -434,6 +434,9 @@ nav.navbar{
   color:var(--navy);transition:color .18s
 }
 .conv-link:hover{color:var(--g2)}
+/* Uma notícia pode ter mais de uma fonte (post oficial + matéria de agência). */
+.conv-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin-top:.8rem}
+.conv-links .conv-link{margin-top:0}
 
 .badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;white-space:nowrap}
 .badge-green{background:rgba(31,122,52,.1);color:var(--g2)}

@@ -14,7 +14,12 @@ export function useReveal(dep?: unknown) {
           }
         });
       },
-      { threshold: 0.12 }
+      // Gatilho por posição, não por proporção: um `threshold` de 12% nunca é
+      // atingido por elementos mais altos que ~8 telas (a lista de notícias já
+      // passa de 6.000px), e o bloco ficava invisível até o visitante rolar.
+      // Com threshold 0 + margem negativa embaixo, revela quando o topo do
+      // elemento entra na área útil da tela, seja ele curto ou comprido.
+      { threshold: 0, rootMargin: '0px 0px -12% 0px' }
     );
 
     const timer = setTimeout(() => {
