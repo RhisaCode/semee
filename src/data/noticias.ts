@@ -38,6 +38,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'caixa-economica-parceria-sala-empreendedor',
+    dia: '12', mes: 'AGO', ano: '2026',
+    titulo: 'SEMEE recebe gerente da Caixa Econômica Federal para fortalecer parceria com a Sala do Empreendedor',
+    curto: 'SEMEE e Caixa discutem acesso a crédito e planejamento financeiro para empreendedores',
+    texto: 'Nesta terça-feira (11), a Secretaria Municipal de Empreendedorismo e Emprego recebeu a visita do gerente da Caixa Econômica Federal em Benjamin Constant, João Paulo Fonseca Aguiar. Na agenda com o secretário Fred Deivyd Monteiro, os dois trataram do fortalecimento da parceria entre a instituição financeira e a SEMEE, com atuação direta pela Sala do Empreendedor. Entre as frentes discutidas estão orientações sobre planejamento financeiro e alternativas para facilitar o acesso ao crédito — duas demandas que aparecem com frequência no balcão da Sala e que ganham peso quando há uma instituição bancária disposta a caminhar junto. A aproximação com a Caixa se soma ao trabalho que a Secretaria vem construindo no Cidade Empreendedora, renovado para o ciclo 2027/2028, e amplia o leque de serviços que chegam ao empreendedor local sem que ele precise sair do município.',
+    meta: 'SEMEE · CAIXA ECONÔMICA FEDERAL · SALA DO EMPREENDEDOR · 11 DE AGOSTO',
+    badge: { label: 'Economia', cls: 'badge-blue' },
+    imagem: {
+      src: '/noticias/caixa-semee.jpg',
+      alt: 'Reunião entre o secretário Fred Deivyd Monteiro e o gerente da Caixa Econômica Federal, João Paulo Fonseca Aguiar, na sede da SEMEE',
+      thumb: '/noticias/caixa-semee-thumb.jpg',
+    },
+  },
+  {
     id: 'comunidades-ribeirinhas-nova-alianca',
     dia: '10', mes: 'AGO', ano: '2026',
     titulo: 'Curso de doces e salgados abre a ida da SEMEE às comunidades ribeirinhas, em Nova Aliança',
