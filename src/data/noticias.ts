@@ -47,7 +47,7 @@ export const noticias: Noticia[] = [
     badge: { label: 'Economia', cls: 'badge-blue' },
     imagem: {
       src: '/noticias/caixa-semee.jpg',
-      alt: 'Reunião entre o secretário Fred Deivyd Monteiro e o gerente da Caixa Econômica Federal, João Paulo Fonseca Aguiar, na sede da SEMEE',
+      alt: 'Montagem com três momentos da visita: a equipe da SEMEE e o gerente da Caixa reunidos entre os banners da Sala do Empreendedor, a conversa entre o secretário Fred Deivyd Monteiro e João Paulo Fonseca Aguiar à mesa, e os dois diante do painel da Casa do Empreendedor',
       thumb: '/noticias/caixa-semee-thumb.jpg',
     },
   },
