@@ -38,6 +38,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'estiagem-planejamento-preventivo-marinha',
+    dia: '14', mes: 'AGO', ano: '2026',
+    titulo: 'Prefeitura antecipa o planejamento da estiagem em reunião com a Marinha do Brasil, em Tabatinga',
+    curto: 'Defesa Civil, SEMEE e comerciantes planejam com a Marinha a resposta à vazante',
+    texto: 'A Prefeitura de Benjamin Constant intensificou nesta sexta-feira (14) o planejamento preventivo para reduzir os impactos da estiagem. Representantes das secretarias municipais de Proteção e Defesa Civil e de Empreendedorismo e Emprego, acompanhados da Associação dos Comerciantes, reuniram-se com a Marinha do Brasil em Tabatinga, recebidos pelo comandante, capitão de fragata Eduardo Guimarães de Held. Na pauta, os possíveis efeitos da vazante sobre a navegação, a logística, o abastecimento e o comércio local — quando o rio baixa, é essa base que sustenta o dia a dia do Alto Solimões que entra em risco. Entre as alternativas discutidas está a implantação de um porto intermediário durante o período crítico, com o objetivo de reduzir custos logísticos, atender aos empreendedores e evitar o aumento excessivo dos preços e a escassez de alimentos da cesta básica. A presença da SEMEE nessa mesa tem endereço certo: é o comércio e o pequeno negócio local, o mesmo público atendido todos os dias na Sala do Empreendedor, que mais sentem a vazante no custo do frete e na prateleira. Com diálogo e articulação institucional, a administração municipal antecipa desafios e busca soluções para proteger a população e manter as atividades essenciais do município.',
+    meta: 'PREFEITURA · DEFESA CIVIL · SEMEE · MARINHA DO BRASIL · 14 DE AGOSTO',
+    badge: { label: 'Governo', cls: 'badge-yellow' },
+    imagem: {
+      src: '/noticias/estiagem-marinha.jpg',
+      alt: 'Card da Prefeitura com dois momentos da agenda em Tabatinga: a comitiva de Benjamin Constant reunida em sala com o capitão de fragata Eduardo Guimarães de Held, da Marinha do Brasil, e o grupo diante do pórtico do 9º Distrito Naval – Capitania Fluvial, sob a faixa "Cuidando do presente, construindo o futuro"',
+      thumb: '/noticias/estiagem-marinha-thumb.jpg',
+    },
+  },
+  {
     id: 'caixa-economica-parceria-sala-empreendedor',
     dia: '12', mes: 'AGO', ano: '2026',
     titulo: 'SEMEE recebe gerente da Caixa Econômica Federal para fortalecer parceria com a Sala do Empreendedor',
