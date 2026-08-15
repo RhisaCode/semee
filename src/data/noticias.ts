@@ -52,6 +52,20 @@ export const noticias: Noticia[] = [
     },
   },
   {
+    id: 'comunidades-ribeirinhas-nova-alianca',
+    dia: '14', mes: 'AGO', ano: '2026',
+    titulo: 'SEMEE leva curso de doces e salgados a Nova Aliança e fecha turma com 49 participantes',
+    curto: 'Curso de doces e salgados em Nova Aliança termina com 49 participantes',
+    texto: 'A ida da SEMEE às comunidades ribeirinhas começou na segunda-feira (10), na comunidade de Nova Aliança, com um curso de preparação de doces e salgados voltado às mulheres do lugar — a equipe da Secretaria foi de barco levar capacitação, treinamento e orientação sobre empreendedorismo aos moradores. A turma abriu com cerca de 30 inscritas e foi crescendo ao longo da semana: fechou nesta sexta-feira (14), à noite, com 49 participantes reunidas em torno das bandejas de mini pizza, tortinha doce e salgada e rocambole que saíram do forno na última aula. Escolher doces e salgados como primeiro conteúdo teve uma razão prática: é uma das portas de entrada mais curtas entre aprender uma técnica e ter o que vender, e o curso trabalhou o preparo, a apresentação e a organização de quem já produz ou quer começar. Nova Aliança foi o piloto de uma frente que vai se repetir: Feijoal e Nova Esperança já estão na fila, e outras comunidades devem entrar no roteiro. Sair da sede e atender na própria comunidade é uma escolha que diz muito sobre como a Secretaria entende o seu trabalho — quem está mais longe do balcão costuma ser justamente quem tem menos acesso à orientação que faz um pequeno negócio andar. A ação se apoia no Cidade Empreendedora, a parceria com o Sebrae que o município acabou de renovar para o ciclo 2027/2028, e conversa com o que a SEMEE mantém na sede: a Sala do Empreendedor, o SIME e a plataforma ContrataBC. "Nosso compromisso é levar oportunidades, capacitação e apoio para quem move nossa cidade", resume o material da Secretaria sobre a ida às comunidades ribeirinhas.',
+    meta: 'SEMEE EM AÇÃO · NOVA ALIANÇA · 10 A 14 DE AGOSTO · 49 PARTICIPANTES',
+    badge: { label: 'Capacitação', cls: 'badge-green' },
+    imagem: {
+      src: '/noticias/comunidades-ribeirinhas.jpg',
+      alt: 'Montagem com dois momentos do encerramento em Nova Aliança: a turma completa reunida no palco comunitário sob a faixa do Curso de Bolos e Salgados, e o grupo de participantes exibindo as bandejas de rocambole e salgados prontos na cozinha',
+      thumb: '/noticias/comunidades-ribeirinhas-thumb.jpg',
+    },
+  },
+  {
     id: 'caixa-economica-parceria-sala-empreendedor',
     dia: '12', mes: 'AGO', ano: '2026',
     titulo: 'SEMEE recebe gerente da Caixa Econômica Federal para fortalecer parceria com a Sala do Empreendedor',
@@ -63,20 +77,6 @@ export const noticias: Noticia[] = [
       src: '/noticias/caixa-semee.jpg',
       alt: 'Montagem com três momentos da visita: a equipe da SEMEE e o gerente da Caixa reunidos entre os banners da Sala do Empreendedor, a conversa entre o secretário Fred Deivyd Monteiro e João Paulo Fonseca Aguiar à mesa, e os dois diante do painel da Casa do Empreendedor',
       thumb: '/noticias/caixa-semee-thumb.jpg',
-    },
-  },
-  {
-    id: 'comunidades-ribeirinhas-nova-alianca',
-    dia: '10', mes: 'AGO', ano: '2026',
-    titulo: 'Curso de doces e salgados abre a ida da SEMEE às comunidades ribeirinhas, em Nova Aliança',
-    curto: 'Curso de doces e salgados abre a ida da SEMEE às comunidades ribeirinhas',
-    texto: 'A ida da SEMEE às comunidades ribeirinhas começou nesta segunda-feira (10), na comunidade de Nova Aliança, com um curso de preparação de doces e salgados voltado às mulheres do lugar. São cerca de 30 inscritas, e a formação segue até sexta-feira (14), na própria comunidade — a equipe da Secretaria foi de barco levar capacitação, treinamento e orientação sobre empreendedorismo aos moradores. Escolher doces e salgados como primeiro conteúdo tem uma razão prática: é uma das portas de entrada mais curtas entre aprender uma técnica e ter o que vender, e o curso trabalha justamente o preparo, a apresentação e a organização de quem já produz ou quer começar. Nova Aliança é o piloto de uma frente que vai se repetir: Feijoal e Nova Esperança já estão na fila, e outras comunidades devem entrar no roteiro. Sair da sede e atender na própria comunidade é uma escolha que diz muito sobre como a Secretaria entende o seu trabalho — quem está mais longe do balcão costuma ser justamente quem tem menos acesso à orientação que faz um pequeno negócio andar. A ação se apoia no Cidade Empreendedora, a parceria com o Sebrae que o município acabou de renovar para o ciclo 2027/2028, e conversa com o que a SEMEE mantém na sede: a Sala do Empreendedor, o SIME e a plataforma ContrataBC. "Nosso compromisso é levar oportunidades, capacitação e apoio para quem move nossa cidade", resume o material da Secretaria sobre a ida às comunidades ribeirinhas.',
-    meta: 'SEMEE EM AÇÃO · NOVA ALIANÇA · 10 A 14 DE AGOSTO · CIDADE EMPREENDEDORA',
-    badge: { label: 'Capacitação', cls: 'badge-green' },
-    imagem: {
-      src: '/noticias/comunidades-ribeirinhas.jpg',
-      alt: 'Card "Rumo às comunidades ribeirinhas": equipe da SEMEE e moradores reunidos em um barco no rio, com os pilares capacitação e orientação, inovação e soluções, parcerias que geram resultados e desenvolvimento sustentável',
-      thumb: '/noticias/comunidades-ribeirinhas-thumb.jpg',
     },
   },
   {
