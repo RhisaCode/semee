@@ -160,7 +160,10 @@ Regras que não se negociam:
   em fonte pública verificável;
 - ao final, confira no ar que a notícia nova apareceu E que as anteriores
   continuam lá;
-- avise no grupo "checklist tasks" (nunca no grupo da SEMEE) com o link direto.
+- publicou com verificação OK? Siga o §6 do playbook: avisar o Fred no próprio
+  grupo do site com o link direto (autorizado em caráter permanente pelo Pedro
+  em 15/08/2026 — exceção 2 da SPEC da skill falar) e depois o grupo
+  "checklist tasks". NÃO publicou? Não escreva em grupo nenhum — só o RESULTADO.
 
 Termine a sua resposta com uma linha começando por RESULTADO: seguida de
 PUBLICADO <slug> ou NADA <motivo curto>."""
@@ -200,6 +203,20 @@ def main() -> int:
     try:
         estado = ler_estado()
         desde = estado.get('ultimo_ts') or '2026-08-06 22:00:00+00:00'
+        # O cursor COMPARTILHADO (VPS) é a verdade: o vigia das 03:15 e o /loop
+        # do Avell avançam o mesmo carimbo em /root/.cache/sites-bc-watch.json.
+        # Sem consultá-lo, esta tarefa dispara em cima de material que outro
+        # publicador já tratou (aconteceu em 15/08/2026 com as fotos de Nova
+        # Aliança). O replace normaliza para o formato do DB — comparar string
+        # 'Z'/'T' contra '+00:00'/espaço esconde mensagens do mesmo dia.
+        try:
+            bruto = ssh('cat /root/.cache/sites-bc-watch.json', timeout=60)
+            remoto = json.loads(bruto)['groups'][GRUPO_SEMEE]['last_read']
+            remoto = remoto.replace('T', ' ').replace('Z', '+00:00')
+            if remoto > desde:
+                desde = remoto
+        except Exception as e:  # noqa: BLE001 — sem VPS agora, o local serve
+            log(f'cursor compartilhado indisponível ({e}) — usando o local')
         log(f'verificando mensagens depois de {desde}')
 
         try:
