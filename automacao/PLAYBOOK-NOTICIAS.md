@@ -104,8 +104,24 @@ que pega o acidente do passo 2.
 
 ## 6. Avisar
 
-Mandar para o grupo **checklist tasks** (não para o grupo da SEMEE: quem fala com
-o Fred é o Pedro):
+**6a. O Fred, no próprio grupo do site** — autorizado em caráter permanente por
+ordem nominal do Pedro em 15/08/2026 ("…e avise ele com o link da notícia"),
+registrada como exceção 2 na SPEC da skill `falar`. Vale SÓ para o aviso
+pós-publicação, e SÓ depois do passo 5 (verificação no ar) passar. Padrão de
+três mensagens, uma por envio:
+
+```bash
+printf '%s' "Fredão, a de <tema> está no ar:" | ssh vps "cd /root/ProjetosCC/scripts/wa && python3 wa_send.py --jid 120363430446716638@g.us --stdin"
+printf '%s' "https://semee.tech/#/noticia/<slug>" | ssh vps "…idem…"
+printf '%s' "<nota editorial: o que foi acrescentado ao texto dele>. Dá uma olhada e me diz se pegou bem." | ssh vps "…idem…"
+```
+
+Sem negrito, sem emoji, texto corrido. Conferir no fio depois
+(`wa_read.py thread 120363430446716638@g.us --limit 3`). Se o Fred responder,
+**não responder de volta** — registrar e deixar para o Pedro (R82 da falar).
+Qualquer conversa além deste aviso continua sendo do Pedro.
+
+**6b. O grupo checklist tasks** (rastro do Pedro):
 
 ```bash
 printf '%s' "…texto…" | ssh vps "cd /root/ProjetosCC/scripts/wa && python3 wa_send.py --jid 120363426624624241@g.us --stdin"
@@ -113,6 +129,11 @@ printf '%s' "…texto…" | ssh vps "cd /root/ProjetosCC/scripts/wa && python3 w
 
 Incluir: o que foi publicado, o link direto `https://semee.tech/#/noticia/<slug>`,
 e o que ficou pendente (foto que falta, dúvida a confirmar com o Fred).
+
+**6c. Rastro**: linha no ledger (`/root/.claude/goals/_ledger-conversas.md`) e
+avançar o `last_read` do grupo em `/root/.cache/sites-bc-watch.json` para o
+timestamp da mensagem mais nova tratada — é o mesmo cursor do vigia do VPS e do
+/loop do Avell; quem publica, avança.
 
 ## 7. Se não houver nada novo
 
