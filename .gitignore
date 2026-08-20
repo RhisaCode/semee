@@ -7,3 +7,6 @@ dist/
 tsconfig.tsbuildinfo
 
 .firebase/
+
+__pycache__/
+*.pyc
