@@ -38,6 +38,34 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'estiagem-islandia-peru-cooperacao',
+    dia: '19', mes: 'AGO', ano: '2026',
+    titulo: 'Benjamin Constant e Islândia (Peru) firmam cooperação para o enfrentamento da estiagem 2026',
+    curto: 'Benjamin Constant e Islândia (Peru) alinham resposta conjunta à estiagem 2026',
+    texto: 'Nesta quarta-feira (19), em Islândia, no Peru, as Prefeituras de Benjamin Constant e de Islândia se reuniram para fortalecer a cooperação regional entre os dois municípios fronteiriços diante da estiagem de 2026. Na pauta, o alinhamento de estratégias de prevenção, preparação e enfrentamento da vazante, com a Defesa Civil de Benjamin Constant e a Defesa Civil de Islândia à mesa. O encontro buscou construir soluções conjuntas para reduzir os impactos da estiagem, proteger as comunidades dos dois lados da fronteira, apoiar as atividades econômicas da região e fortalecer a capacidade de resposta dos dois municípios. A cooperação entre Benjamin Constant e Islândia reforça um traço do Alto Solimões: no trecho de tríplice fronteira, os desafios da vazante não respeitam linha de fronteira, e as soluções, cada vez mais, também não.',
+    meta: 'PREFEITURA · DEFESA CIVIL · ISLÂNDIA (PERU) · 19 DE AGOSTO',
+    badge: { label: 'Cooperação', cls: 'badge-blue' },
+    imagem: {
+      src: '/noticias/estiagem-islandia-peru.jpg',
+      alt: 'Card da reunião na Prefeitura de Islândia, no Peru: representantes da Defesa Civil de Benjamin Constant e da Defesa Civil de Islândia reunidos à mesa para alinhar a cooperação no enfrentamento da estiagem 2026',
+      thumb: '/noticias/estiagem-islandia-peru-thumb.jpg',
+    },
+  },
+  {
+    id: 'estiagem-exercito-planejamento',
+    dia: '19', mes: 'AGO', ano: '2026',
+    titulo: 'Prefeito Semeide se reúne com o Comando do Exército Brasileiro para planejar o enfrentamento da estiagem 2026',
+    curto: 'Prefeitura e Exército Brasileiro alinham planejamento para a estiagem 2026',
+    texto: 'Nesta quarta-feira (19), o prefeito Semeide Bermeguy esteve, acompanhado de sua comitiva, em agenda no Comando do Exército Brasileiro para tratar do planejamento estratégico de enfrentamento da estiagem de 2026. O encontro reuniu a Prefeitura de Benjamin Constant, a Defesa Civil, a Secretaria Municipal de Empreendedorismo e Emprego (SEMEE) e a Secretaria Municipal de Assistência Social ao lado do Exército Brasileiro, reforçando a articulação entre as instituições que vão atuar juntas na prevenção, no planejamento, na proteção da população e na resposta aos desafios que a vazante deve trazer neste ano. Reunir quem cuida da proteção civil, da assistência social, do desenvolvimento econômico e da força federal em uma mesma mesa, antes que o problema chegue, é o caminho que a gestão tem seguido para proteger a população e manter as atividades essenciais do município.',
+    meta: 'PREFEITURA · DEFESA CIVIL · SEMEE · EXÉRCITO BRASILEIRO · 19 DE AGOSTO',
+    badge: { label: 'Governo', cls: 'badge-yellow' },
+    imagem: {
+      src: '/noticias/estiagem-exercito.jpg',
+      alt: 'Card da agenda do prefeito Semeide Bermeguy e comitiva no Comando do Exército Brasileiro, tratando do planejamento estratégico para o enfrentamento da estiagem 2026',
+      thumb: '/noticias/estiagem-exercito-thumb.jpg',
+    },
+  },
+  {
     id: 'estiagem-planejamento-preventivo-marinha',
     dia: '14', mes: 'AGO', ano: '2026',
     titulo: 'Prefeitura antecipa o planejamento da estiagem em reunião com a Marinha do Brasil, em Tabatinga',
