@@ -38,6 +38,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'edital-paa-produtores-rurais',
+    dia: '04', mes: 'SET', ano: '2026',
+    titulo: 'Prefeitura lança edital de seleção de produtores rurais para fornecer alimentos ao PAA Municipal',
+    curto: 'Edital 001/2026 cadastra produtores da agricultura familiar para o PAA Municipal',
+    texto: 'A Prefeitura de Benjamin Constant lançou o Edital 001/2026 de Seleção de Produtores e Produtoras Rurais, que abre o cadastro de fornecimento de produtos da agricultura familiar para o Programa de Aquisição de Alimentos — o PAA Municipal, conforme a Portaria SESAN/MDS nº 81, de 2 de julho de 2026. O edital é um desdobramento da adesão do município ao Sistema Nacional de Segurança Alimentar e Nutricional (SISAN), com a criação do CAISAN e do COMSAN, e da participação ativa na estratégia Alimenta Cidades +1000. Na prática, quem produz na roça, no sítio e nas comunidades passa a poder vender diretamente para o poder público, e o alimento comprado chega à população em situação de vulnerabilidade — um circuito que fortalece a renda de quem planta e amplia o acesso a comida saudável e de qualidade para quem mais precisa, na mesma linha do trabalho que o município vem fazendo para movimentar a economia local. As inscrições vão de 02 a 12 de setembro de 2026, das 7h às 13h, no prédio da Secretaria Municipal de Agricultura e Pesca, na Rua 1º de Maio, bairro Colônia, em frente ao Estádio Municipal.',
+    meta: 'PREFEITURA · AGRICULTURA FAMILIAR · PAA MUNICIPAL · 02 A 12 DE SETEMBRO',
+    badge: { label: 'Edital', cls: 'badge-green' },
+    imagem: {
+      src: '/noticias/edital-paa.jpg',
+      alt: 'Card da Prefeitura de Benjamin Constant anunciando o Edital 001/2026 de Seleção de Produtores e Produtoras Rurais para o cadastro de fornecimento da agricultura familiar ao PAA Municipal',
+      thumb: '/noticias/edital-paa-thumb.jpg',
+    },
+  },
+  {
     id: 'estiagem-islandia-peru-cooperacao',
     dia: '19', mes: 'AGO', ano: '2026',
     titulo: 'Benjamin Constant e Islândia (Peru) firmam cooperação para o enfrentamento da estiagem 2026',
