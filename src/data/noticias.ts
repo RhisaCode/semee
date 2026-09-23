@@ -38,6 +38,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'cidade-empreendedora-alinhamento-2027-2028',
+    dia: '23', mes: 'SET', ano: '2026',
+    titulo: 'Prefeitura e Sebrae alinham as próximas ações do Cidade Empreendedora 2027/2028',
+    curto: 'Prefeitura e Sebrae alinham as próximas ações do Cidade Empreendedora',
+    texto: 'A Prefeitura de Benjamin Constant e o Sebrae se reuniram para alinhar as próximas ações do Programa Cidade Empreendedora no biênio 2027/2028, sob coordenação da Secretaria Municipal de Empreendedorismo e Emprego. O encontro sentou à mesma mesa a equipe da gestão municipal e a do Sebrae, e é o passo que transforma em plano de trabalho o Termo de Adesão assinado pelo prefeito Semeide Bermeguy em 6 de agosto: o programa atua dentro da administração municipal, com um plano desenhado sob medida para o município, executado ao longo de 18 a 24 meses e com investimento compartilhado entre o Sebrae e a Prefeitura. Em Benjamin Constant o percurso já tem resultado em casa — no ciclo anterior foram 122 ações em sete eixos, que alcançaram mais de 2.400 pessoas e levaram o município ao Prêmio Sebrae Prefeitura Empreendedora, em nível nacional, no eixo Gestão Inovadora. Para a SEMEE, o novo ciclo é a base sobre a qual seguem a Sala do Empreendedor, o SIME e a plataforma ContrataBC. Como resumiu a Prefeitura ao anunciar o alinhamento, é "uma parceria que reúne a gestão municipal para continuar transformando ideias, capacitação e oportunidades em mais desenvolvimento, emprego e renda".',
+    meta: 'PREFEITURA · SEBRAE · CICLO 2027/2028 · COORDENAÇÃO DA SEMEE',
+    badge: { label: 'Programa', cls: 'badge-green' },
+    imagem: {
+      src: '/noticias/cidade-empreendedora-alinhamento.jpg',
+      alt: 'Equipes da Prefeitura de Benjamin Constant e do Sebrae reunidas para alinhar as próximas ações do Programa Cidade Empreendedora 2027/2028, com apresentação do programa e banners da Sala do Empreendedor',
+      thumb: '/noticias/cidade-empreendedora-alinhamento-thumb.jpg',
+    },
+  },
+  {
     id: 'edital-paa-produtores-rurais',
     dia: '04', mes: 'SET', ano: '2026',
     titulo: 'Prefeitura lança edital de seleção de produtores rurais para fornecer alimentos ao PAA Municipal',
