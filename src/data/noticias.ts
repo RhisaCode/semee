@@ -38,6 +38,18 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'fno-rotas-banco-da-amazonia',
+    dia: '27', mes: 'OUT', ano: '2026',
+    titulo: 'Prefeitura, Sebrae e Banco da Amazônia juntos pelo empreendedorismo local',
+    curto: 'FNO Rotas leva o crédito do Banco da Amazônia à Sala do Empreendedor',
+    texto: 'A Secretaria Municipal de Empreendedorismo e Emprego, em parceria com o Sebrae, recebeu nesta terça-feira, 27 de outubro, o Banco da Amazônia para o evento FNO Rotas. Na Sala do Empreendedor, de casa cheia, foram apresentadas as oportunidades de crédito e financiamento do Fundo Constitucional de Financiamento do Norte, o FNO, voltadas a empresários, agricultores e pescadores. O gerente do Banco da Amazônia em Tefé, Carlos Alberto, falou direto ao pequeno empresário e ao microempreendedor: o banco faz o cadastro, analisa a situação e a documentação de cada um e procura a melhor forma de fazer o crédito chegar a quem precisa. Entre os empreendedores presentes, a importância de ter o banco dentro do município apareceu na fala de quem quer ver o próprio negócio crescer, principalmente as mulheres, com acesso a recursos de juros baixos. O objetivo do encontro foi aproximar a instituição de quem empreende e produz em Benjamin Constant, incentivar investimentos, fortalecer os negócios e estimular a geração de emprego e renda, e a proposta é que o apoio continue depois que o crédito sai. Para o subsecretário de Empreendedorismo e Emprego, Adjalma Camelo, a ação faz parte das políticas públicas da secretaria para o crescimento e o fortalecimento dos empreendedores do município. É a mesma trilha aberta pelo 1º Feirão de Crédito e mantida no dia a dia da Sala do Empreendedor, que traz para perto de quem empreende as instituições que financiam a abertura e a ampliação de um negócio.',
+    meta: 'SEMEE · SEBRAE · BANCO DA AMAZÔNIA · FNO ROTAS · 27 DE OUTUBRO',
+    badge: { label: 'Oportunidade', cls: 'badge-yellow' },
+    videos: [
+      { src: '/noticias/fno-rotas.mp4', poster: '/noticias/fno-rotas.jpg', thumb: '/noticias/fno-rotas-thumb.jpg', titulo: 'FNO Rotas — crédito do Banco da Amazônia na Sala do Empreendedor' },
+    ],
+  },
+  {
     id: 'cidade-empreendedora-alinhamento-2027-2028',
     dia: '23', mes: 'SET', ano: '2026',
     titulo: 'Prefeitura e Sebrae alinham as próximas ações do Cidade Empreendedora 2027/2028',
