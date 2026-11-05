@@ -38,6 +38,20 @@ export interface Noticia {
 
 export const noticias: Noticia[] = [
   {
+    id: 'ii-forum-de-turismo',
+    dia: '05', mes: 'NOV', ano: '2026',
+    titulo: 'Prefeitura convida a população para o II Fórum de Turismo, no dia 11 de novembro',
+    curto: 'II Fórum de Turismo: 11 de novembro, no Auditório Benjamin Constant',
+    texto: 'A Prefeitura de Benjamin Constant, por meio da Secretaria Municipal de Turismo (SEMTUR), convida a população, os empreendedores, os profissionais do setor e todos os interessados para o II Fórum de Turismo, marcado para o dia 11 de novembro de 2026, no Auditório Benjamin Constant, com programação das 8h às 12h e das 14h às 17h. O tema desta edição é "Integrar para desenvolver: turismo inteligente e sustentável", e a proposta é abrir um momento de diálogo e construção coletiva, porque, como diz o convite, "o turismo se constrói com a participação de todos". O chamado também é para quem empreende: SEMTUR e SEMEE nasceram da mesma lei, a de nº 1.433, de 26 de setembro de 2025, que desmembrou a antiga Secretaria de Empreendedorismo e Turismo em duas pastas. Quem tem um negócio ou pensa em abrir um pode levar a sua experiência ao Fórum e segue contando, no dia a dia, com o atendimento da SEMEE na Sala do Empreendedor.',
+    meta: 'PREFEITURA · SEMTUR · II FÓRUM DE TURISMO · 11 DE NOVEMBRO',
+    badge: { label: 'Agenda', cls: 'badge-blue' },
+    imagem: {
+      src: '/noticias/ii-forum-turismo.jpg',
+      alt: 'Card da Prefeitura de Benjamin Constant e da SEMTUR anunciando o II Fórum de Turismo, com o tema "Integrar para desenvolver: turismo inteligente e sustentável", em 11 de novembro de 2026, das 8h às 12h e das 14h às 17h, no Auditório Benjamin Constant, com ilustração de uma mulher de cocar usando um tablet diante de um rio com barco, cachoeira e tucano, sobre foto aérea de uma orla',
+      thumb: '/noticias/ii-forum-turismo-thumb.jpg',
+    },
+  },
+  {
     id: 'fno-rotas-banco-da-amazonia',
     dia: '27', mes: 'OUT', ano: '2026',
     titulo: 'Prefeitura, Sebrae e Banco da Amazônia juntos pelo empreendedorismo local',
